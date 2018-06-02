@@ -16,6 +16,7 @@ $result = mysqli_query($link,$sql);
 </head>
 
 <body>
+
 <div class="a1-container a1-black">
 	<div class="a1-bar a1-black" style="width:800px; margin:0 auto;">
    	  <div class="a1-bar-item a1-hover-blue"><a style="text-decoration:none;" href="index.php">Home</a></div>
@@ -84,12 +85,14 @@ $result = mysqli_query($link,$sql);
 			 
 			 <tr id="oncampus">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="select" id="select"><?php 
+               <td height="35"><select name="select" id="select" onchange="myProgramType(this.value,1)">
+               <option value="0">--Please select--</option>
+                      <?php 
 							$sql = ("select * from oncampus");
                         $result = mysqli_query($link,$sql);
                         while($row = mysqli_fetch_assoc($result)) 
 											{
-												echo '<option>'.$row["title"].'</a></option>';
+												echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
 												
 												
 											}
@@ -101,12 +104,14 @@ $result = mysqli_query($link,$sql);
              
              <tr id="offcampus">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="select" id="select"><?php 
+               <td height="35"><select name="select" id="select" onchange="myProgramType(this.value,2)">
+                       <option value="0">--Please select--</option>
+                       <?php 
 							$sql = ("select * from offcampus");
                             $result = mysqli_query($link,$sql);
                             while($row = mysqli_fetch_assoc($result)) 
 											{
-												echo '<option>'.$row["title"].'</a></option>';
+												echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
 												
 												
 											}
@@ -118,12 +123,14 @@ $result = mysqli_query($link,$sql);
              
              <tr id="research">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="select" id="select"><?php 
+               <td height="35"><select name="select" id="select" onchange="myProgramType(this.value,3)">
+               <option value="0">--Please select--</option>
+                    <?php 
 							$sql = ("select * from researchstudy");
                             $result = mysqli_query($link,$sql);
                             while($row = mysqli_fetch_assoc($result)) 
 											{
-												echo '<option>'.$row["title"].'</a></option>';
+												echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
 												
 												
 											}
@@ -135,12 +142,14 @@ $result = mysqli_query($link,$sql);
              
              <tr id="pgdaem">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="select" id="select"><?php 
+               <td height="35"><select name="select" id="select" onchange="myProgramType(this.value,4)">
+               <option value="0">--Please select--</option>
+                   <?php 
 							$sql = ("select * from pgdaem");
                             $result = mysqli_query($link,$sql);
                             while($row = mysqli_fetch_assoc($result)) 
 											{
-												echo '<option>'.$row["title"].'</a></option>';
+												echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
 												
 												
 											}
@@ -149,61 +158,16 @@ $result = mysqli_query($link,$sql);
 			   </td>
              </tr>
              
+             <table id="programtype">
+
              
-             <tr id="durationfrom1">
-               <td height="35">DURATION FROM:</td>
-               <td height="35"><input name="duration" type="text" id="three" size="30"  readonly></td>
-             </tr>
+             </table>
              
-             <tr id="durationto1">
-               <td height="35">DURATION TO:</td>
-               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
-             </tr>
-             
-             <tr id="venue1">
-               <td height="35">VENUE:</td>
-               <td height="35"><input name="venue" type="text" id="two" size="30" readonly></td>
-             </tr>
-             
-             <tr id="durationfrom2">
-               <td height="35">DURATION FROM:</td>
-               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
-             </tr>
-             
-             <tr id="durationto2">
-               <td height="35">DURATION TO:</td>
-               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
-             </tr>
-             
-             <tr id="venue2">
-               <td height="35">VENUE:</td>
-               <td height="35"><input name="venue" type="text" id="two" size="30" readonly></td>
-             </tr>
-             
-              <tr id="durationfrom3">
-               <td height="35">DURATION FROM:</td>
-               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
-             </tr>
-             
-             <tr id="durationto3">
-               <td height="35">DURATION TO:</td>
-               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
-             </tr>
-             
-            <tr id="conduct_by">
-               <td height="35">Conduct By: </td>
-               <td height="35"><input name="conduct" type="text" id="two" size="30" readonly></td>
-             </tr>
-             
-             <tr id="issue_by">
-               <td height="35">Issue By: </td>
-               <td height="35"><input name="issue" type="text" id="two" size="30" readonly></td>
-             </tr>
-             
+            <table>
               <tr>
 			  
                <td height="35">DATE OF REPORTING:</td>
-               <td height="35"><input name="dor" type="text" size="45"></td>
+               <td height="35"><input name="dor" type="date" size="45"></td>
              </tr>
              <tr>
              <tr>
@@ -217,5 +181,29 @@ $result = mysqli_query($link,$sql);
        </form>
     </div>
     </div>   
+    
+<script>   
+    function myProgramType(str,type){
+    if (str == "0") {
+        document.getElementById("programtype").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("programtype").innerHTML=this.responseText;
+                
+            }
+        };
+        xmlhttp.open("GET","programdetail.php?q="+str+"&t="+type,true);
+        xmlhttp.send();
+    }
+    }
+    
+</script>
+
 </body>
 </html>
