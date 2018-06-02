@@ -10,7 +10,7 @@ $result = mysqli_query($link,$sql);
 <html>
 <head>
 <meta charset="utf-8">
-<title>TMS</title>
+<title>TMS | Add Program</title>
 <link href="a1style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="./script/script.js"></script>
@@ -55,12 +55,12 @@ $result = mysqli_query($link,$sql);
                <td height="35"><input name="venue" type="text" id="two" size="30"></td>
              </tr>
              <tr id="durationfrom">
-               <td height="35">DURATION:</td>
+               <td height="35">DURATION FROM:</td>
                <td height="35"><input name="duration" type="date" id="three" size="30"></td>
              </tr>
              
              <tr id="durationto">
-               <td height="35">DURATION:</td>
+               <td height="35">DURATION TO:</td>
                <td height="35"><input name="duration" type="date" id="three" size="30"></td>
              </tr>
              

@@ -9,7 +9,7 @@ $result = mysqli_query($link,$sql);
 <html>
 <head>
 <meta charset="utf-8">
-<title>TMS</title>
+<title>TMS | Add Trainee</title>
 <link href="a1style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="./script/script.js"></script>
@@ -86,8 +86,8 @@ $result = mysqli_query($link,$sql);
                <td height="35">PROGRAM NAME:</td>
                <td height="35"><select name="select" id="select"><?php 
 							$sql = ("select * from oncampus");
-$result = mysqli_query($link,$sql);
-while($row = mysqli_fetch_assoc($result)) 
+                        $result = mysqli_query($link,$sql);
+                        while($row = mysqli_fetch_assoc($result)) 
 											{
 												echo '<option>'.$row["title"].'</a></option>';
 												
@@ -103,8 +103,8 @@ while($row = mysqli_fetch_assoc($result))
                <td height="35">PROGRAM NAME:</td>
                <td height="35"><select name="select" id="select"><?php 
 							$sql = ("select * from offcampus");
-$result = mysqli_query($link,$sql);
-while($row = mysqli_fetch_assoc($result)) 
+                            $result = mysqli_query($link,$sql);
+                            while($row = mysqli_fetch_assoc($result)) 
 											{
 												echo '<option>'.$row["title"].'</a></option>';
 												
@@ -119,9 +119,9 @@ while($row = mysqli_fetch_assoc($result))
              <tr id="research">
                <td height="35">PROGRAM NAME:</td>
                <td height="35"><select name="select" id="select"><?php 
-							$sql = ("select * from offcampus");
-$result = mysqli_query($link,$sql);
-while($row = mysqli_fetch_assoc($result)) 
+							$sql = ("select * from researchstudy");
+                            $result = mysqli_query($link,$sql);
+                            while($row = mysqli_fetch_assoc($result)) 
 											{
 												echo '<option>'.$row["title"].'</a></option>';
 												
@@ -136,9 +136,9 @@ while($row = mysqli_fetch_assoc($result))
              <tr id="pgdaem">
                <td height="35">PROGRAM NAME:</td>
                <td height="35"><select name="select" id="select"><?php 
-							$sql = ("select * from offcampus");
-$result = mysqli_query($link,$sql);
-while($row = mysqli_fetch_assoc($result)) 
+							$sql = ("select * from pgdaem");
+                            $result = mysqli_query($link,$sql);
+                            while($row = mysqli_fetch_assoc($result)) 
 											{
 												echo '<option>'.$row["title"].'</a></option>';
 												
@@ -149,6 +149,56 @@ while($row = mysqli_fetch_assoc($result))
 			   </td>
              </tr>
              
+             
+             <tr id="durationfrom1">
+               <td height="35">DURATION FROM:</td>
+               <td height="35"><input name="duration" type="text" id="three" size="30"  readonly></td>
+             </tr>
+             
+             <tr id="durationto1">
+               <td height="35">DURATION TO:</td>
+               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
+             </tr>
+             
+             <tr id="venue1">
+               <td height="35">VENUE:</td>
+               <td height="35"><input name="venue" type="text" id="two" size="30" readonly></td>
+             </tr>
+             
+             <tr id="durationfrom2">
+               <td height="35">DURATION FROM:</td>
+               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
+             </tr>
+             
+             <tr id="durationto2">
+               <td height="35">DURATION TO:</td>
+               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
+             </tr>
+             
+             <tr id="venue2">
+               <td height="35">VENUE:</td>
+               <td height="35"><input name="venue" type="text" id="two" size="30" readonly></td>
+             </tr>
+             
+              <tr id="durationfrom3">
+               <td height="35">DURATION FROM:</td>
+               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
+             </tr>
+             
+             <tr id="durationto3">
+               <td height="35">DURATION TO:</td>
+               <td height="35"><input name="duration" type="text" id="three" size="30" readonly></td>
+             </tr>
+             
+            <tr id="conduct_by">
+               <td height="35">Conduct By: </td>
+               <td height="35"><input name="conduct" type="text" id="two" size="30" readonly></td>
+             </tr>
+             
+             <tr id="issue_by">
+               <td height="35">Issue By: </td>
+               <td height="35"><input name="issue" type="text" id="two" size="30" readonly></td>
+             </tr>
              
               <tr>
 			  
