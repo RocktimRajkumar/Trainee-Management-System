@@ -13,6 +13,7 @@ $result = mysqli_query($link,$sql);
 <title>TMS</title>
 <link href="a1style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./script/script.js"></script>
 </head>
 
 <body>
@@ -37,11 +38,11 @@ $result = mysqli_query($link,$sql);
            <td height="35"><table width="100%" border="0" align="center">
            	 <tr>
            	   <td height="35">PROGRAM TYPE:</td>
-           	   <td height="35"><select name="select" id="select"><?php
+           	   <td height="35"><select name="select" id="select" onchange="myFunction()"><?php
 			   
 			  while($row = mysqli_fetch_assoc($result)) 
 											{
-												echo '<option>'.$row["type"].'</a></option>';
+												echo '<option value='.$row["type_id"].'>'.$row["type"].'</a></option>';
 												
 												
 											}
@@ -53,17 +54,33 @@ $result = mysqli_query($link,$sql);
                <td height="35">PROGRAM NAME:</td>
                <td height="35"><input name="venue" type="text" id="two" size="30"></td>
              </tr>
-             <tr>
+             <tr id="durationfrom">
                <td height="35">DURATION:</td>
-               <td height="35"><input name="duration" type="text" id="three" size="30"></td>
+               <td height="35"><input name="duration" type="date" id="three" size="30"></td>
              </tr>
-             <tr>
-               <td height="35">VENUE</td>
+             
+             <tr id="durationto">
+               <td height="35">DURATION:</td>
+               <td height="35"><input name="duration" type="date" id="three" size="30"></td>
+             </tr>
+             
+             <tr id="venue">
+               <td height="35">VENUE:</td>
                <td height="35"><input name="venue" type="text" id="two" size="30"></td>
              </tr>
+             
+            <tr id="conduct_by">
+               <td height="35">Conduct By: </td>
+               <td height="35"><input name="conduct" type="text" id="two" size="30"></td>
+             </tr>
+             
+             <tr id="issue_by">
+               <td height="35">Issue By: </td>
+               <td height="35"><input name="issue" type="text" id="two" size="30"></td>
+             </tr>
             
-             <tr>
-             <tr>
+            
+             
                <td height="35">&nbsp;</td>
                <td height="35"><input class="a1-btn a1-blue" type="submit" name="submit" id="submit" value="Register" >
                  <input class="a1-btn a1-blue" type="reset" name="reset" id="reset" value="Reset"></td>

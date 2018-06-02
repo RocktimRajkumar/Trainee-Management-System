@@ -21,3 +21,10 @@
     
 }
 
+#conduct_by,#issue_by{
+    display: none;
+}
+
+#offcampus,#research,#pgdaem{
+    display:none;
+}

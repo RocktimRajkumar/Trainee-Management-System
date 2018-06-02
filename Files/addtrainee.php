@@ -12,6 +12,7 @@ $result = mysqli_query($link,$sql);
 <title>TMS</title>
 <link href="a1style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./script/script.js"></script>
 </head>
 
 <body>
@@ -66,14 +67,14 @@ $result = mysqli_query($link,$sql);
                <td height="35">PHONE NO:</td>
                <td height="35"><input name="pno" type="text" size="45"></td>
              </tr>
-              <tr>
+
 			   <tr>
                <td height="35">PROGRAM TYPE:</td>
-               <td height="35"><select name="select" id="select"><?php
+               <td height="35"><select name="select" id="select" onchange="myProgram()"><?php
 			   
 			  while($row = mysqli_fetch_assoc($result)) 
 											{
-												echo '<option>'.$row["type"].'</a></option>';
+												echo '<option value='.$row["type_id"].'>'.$row["type"].'</a></option>';
 												
 												
 											}
@@ -81,7 +82,24 @@ $result = mysqli_query($link,$sql);
                 </select></td>
              </tr>
 			 
-			 <tr>
+			 <tr id="oncampus">
+               <td height="35">PROGRAM NAME:</td>
+               <td height="35"><select name="select" id="select"><?php 
+							$sql = ("select * from oncampus");
+$result = mysqli_query($link,$sql);
+while($row = mysqli_fetch_assoc($result)) 
+											{
+												echo '<option>'.$row["title"].'</a></option>';
+												
+												
+											}
+											?></select>
+
+			   </td>
+             </tr>
+             
+             
+             <tr id="offcampus">
                <td height="35">PROGRAM NAME:</td>
                <td height="35"><select name="select" id="select"><?php 
 							$sql = ("select * from offcampus");
@@ -96,6 +114,42 @@ while($row = mysqli_fetch_assoc($result))
 
 			   </td>
              </tr>
+             
+             
+             <tr id="research">
+               <td height="35">PROGRAM NAME:</td>
+               <td height="35"><select name="select" id="select"><?php 
+							$sql = ("select * from offcampus");
+$result = mysqli_query($link,$sql);
+while($row = mysqli_fetch_assoc($result)) 
+											{
+												echo '<option>'.$row["title"].'</a></option>';
+												
+												
+											}
+											?></select>
+
+			   </td>
+             </tr>
+             
+             
+             <tr id="pgdaem">
+               <td height="35">PROGRAM NAME:</td>
+               <td height="35"><select name="select" id="select"><?php 
+							$sql = ("select * from offcampus");
+$result = mysqli_query($link,$sql);
+while($row = mysqli_fetch_assoc($result)) 
+											{
+												echo '<option>'.$row["title"].'</a></option>';
+												
+												
+											}
+											?></select>
+
+			   </td>
+             </tr>
+             
+             
               <tr>
 			  
                <td height="35">DATE OF REPORTING:</td>
