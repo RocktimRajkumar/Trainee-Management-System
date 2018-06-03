@@ -2,8 +2,12 @@
 <?php
  include "connect.php";
  $sql = ("select * from programme");
+session_start();
 $result = mysqli_query($link,$sql);
- 
+ if(!isset($_SESSION["adminlogin"]))
+{
+	header("location:index.php");
+}
  ?>
  
 <html>

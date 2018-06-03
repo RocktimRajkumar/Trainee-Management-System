@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 03/06/2018 20:41:52
+ Date: 04/06/2018 00:18:11
 */
 
 SET NAMES utf8mb4;
@@ -33,7 +33,7 @@ CREATE TABLE `address`  (
 -- ----------------------------
 -- Records of address
 -- ----------------------------
-INSERT INTO `address` VALUES ('1528036776', 'Jorhat', 'ASSAM', 'Rajbari Lane Behind Eleye Cinema Hall');
+INSERT INTO `address` VALUES ('1528051374', 'Jorhat', 'Assam', 'JPR');
 
 -- ----------------------------
 -- Table structure for admin
@@ -66,15 +66,7 @@ CREATE TABLE `offcampus`  (
   INDEX `sID_idx`(`scheduleID`) USING BTREE,
   CONSTRAINT `program_type` FOREIGN KEY (`type_id`) REFERENCES `programme` (`type_id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `pros` FOREIGN KEY (`scheduleID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of offcampus
--- ----------------------------
-INSERT INTO `offcampus` VALUES (1, 'Communication and Training Skills for Efficient', '2018-05-23', '2018-05-26', 'SAMETI, Manipur', 2, '1');
-INSERT INTO `offcampus` VALUES (2, 'Training Methods and Training Management Skills', '2018-06-06', '2018-06-09', 'SAMETI, Sikkim', 2, '2');
-INSERT INTO `offcampus` VALUES (3, 'Organic Farming Techniques and Organic Certification', '2018-08-01', '2018-08-04', 'SAMETI, Arunachal Pradesh', 2, '180603130655');
-INSERT INTO `offcampus` VALUES (4, 'sdfsd', '', '', '', 2, '180603140606');
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for oncampus
@@ -93,16 +85,12 @@ CREATE TABLE `oncampus`  (
   INDEX `pross_idx`(`scheduleID`) USING BTREE,
   CONSTRAINT `ptype` FOREIGN KEY (`type_id`) REFERENCES `programme` (`type_id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `pross` FOREIGN KEY (`scheduleID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of oncampus
 -- ----------------------------
-INSERT INTO `oncampus` VALUES (1, 'Skill development for m-Extension and e-Extension', '2018-05-09', '2018-05-12', 'EEI(NE Region) AAU, Jorhat', 1, '3');
-INSERT INTO `oncampus` VALUES (2, 'Soft skills for Interpersonal Effectiveness of Extension Personnel', '2018-08-08', '2018-08-11', 'EEI(NE Region) AAU, Jorhat', 1, '4');
-INSERT INTO `oncampus` VALUES (3, 'Managerial Skills and Leadership Development', '2018-02-06', '2018-02-09', 'EEI(NE Region AAU,Jorhat)', 1, '180603140641');
-INSERT INTO `oncampus` VALUES (4, 'Regional Workshop on Implementation of Central Sector Schemes and Training Plannign of EEI(NE Region) and SAMETIs of NE states', 'Dates to be decided', 'Dates to be decided', '', 1, '180603140627');
-INSERT INTO `oncampus` VALUES (5, 'Workshop on Climate Smart Agriculture and Disaster Management in NE States', '2018-09-05', '2018-09-08', 'EEI(NE Region AAU, Jorhat)', 1, '180603170609');
+INSERT INTO `oncampus` VALUES (8, 'Skill Development for m-Extension and e-Extension', '2018-05-09', '2018-05-12', 'EEI(NE Region) AAU,Jorhat', 1, '180604000648');
 
 -- ----------------------------
 -- Table structure for pgdaem
@@ -123,13 +111,6 @@ CREATE TABLE `pgdaem`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of pgdaem
--- ----------------------------
-INSERT INTO `pgdaem` VALUES (1, 'Contact classes of PGDAEM 1st Semester for Assam', 'Dates to be decided', 'Dates to be decided', 4, '5');
-INSERT INTO `pgdaem` VALUES (2, 'PGDAEM Examination 1st Semester, Assam', 'Dates to be decided', 'Dates to be decided', 4, '180603140630');
-INSERT INTO `pgdaem` VALUES (3, 'Contact classes of PGDAEM 2nd Semester for Nagaland', 'Dates to be decided', 'Dates to be decided', 4, '180603190642');
-
--- ----------------------------
 -- Table structure for pro_schedule
 -- ----------------------------
 DROP TABLE IF EXISTS `pro_schedule`;
@@ -142,23 +123,7 @@ CREATE TABLE `pro_schedule`  (
 -- ----------------------------
 -- Records of pro_schedule
 -- ----------------------------
-INSERT INTO `pro_schedule` VALUES ('1', NULL);
-INSERT INTO `pro_schedule` VALUES ('180603130631', '1');
-INSERT INTO `pro_schedule` VALUES ('180603130650', 'gggg');
-INSERT INTO `pro_schedule` VALUES ('180603130651', 'gggg');
-INSERT INTO `pro_schedule` VALUES ('180603130655', 'Organic Farming Techniques and Organic Certification');
-INSERT INTO `pro_schedule` VALUES ('180603140606', 'sdfsd');
-INSERT INTO `pro_schedule` VALUES ('180603140627', 'Regional Workshop on Implementation of Central Sector Schemes and Training Plannign of EEI(NE Region) and SAMETIs of NE states');
-INSERT INTO `pro_schedule` VALUES ('180603140630', 'PGDAEM Examination 1st Semester, Assam');
-INSERT INTO `pro_schedule` VALUES ('180603140631', 'Block Chin Working Principle');
-INSERT INTO `pro_schedule` VALUES ('180603140641', 'Managerial Skills and Leadership Development');
-INSERT INTO `pro_schedule` VALUES ('180603170609', 'Workshop on Climate Smart Agriculture and Disaster Management in NE States');
-INSERT INTO `pro_schedule` VALUES ('180603190642', 'Contact classes of PGDAEM 2nd Semester for Nagaland');
-INSERT INTO `pro_schedule` VALUES ('2', NULL);
-INSERT INTO `pro_schedule` VALUES ('3', NULL);
-INSERT INTO `pro_schedule` VALUES ('4', NULL);
-INSERT INTO `pro_schedule` VALUES ('5', NULL);
-INSERT INTO `pro_schedule` VALUES ('6', NULL);
+INSERT INTO `pro_schedule` VALUES ('180604000648', 'Skill Development for m-Extension and e-Extension');
 
 -- ----------------------------
 -- Table structure for programme
@@ -189,28 +154,14 @@ CREATE TABLE `pschedule`  (
   `psession` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `methods` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `facilitator` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  INDEX `prosssss_idx`(`schedule_ID`) USING BTREE,
-  CONSTRAINT `prosssss` FOREIGN KEY (`schedule_ID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE CASCADE ON UPDATE NO ACTION
+  INDEX `pro_schdule`(`schedule_ID`) USING BTREE,
+  CONSTRAINT `pro_schdule` FOREIGN KEY (`schedule_ID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE CASCADE ON UPDATE NO ACTION
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pschedule
 -- ----------------------------
-INSERT INTO `pschedule` VALUES ('1', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('2', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('3', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('4', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('5', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('6', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180603130651', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180603130655', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180603140606', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180603140641', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180603140627', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180603140630', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180603140631', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180603170609', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180603190642', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `pschedule` VALUES ('180604000648', NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for researchstudy
@@ -233,7 +184,6 @@ CREATE TABLE `researchstudy`  (
 -- ----------------------------
 -- Records of researchstudy
 -- ----------------------------
-INSERT INTO `researchstudy` VALUES (1, 'CROPII', 'BILL AAA', 'TERE MAKI', 3, '6');
 INSERT INTO `researchstudy` VALUES (2, 'Block Chin Working Principle', 'Rocktim', 'Charles Xavier', 3, '180603140631');
 
 -- ----------------------------
@@ -256,7 +206,6 @@ CREATE TABLE `trainee`  (
 -- ----------------------------
 -- Records of trainee
 -- ----------------------------
-INSERT INTO `trainee` VALUES ('1528036776', 'Rajkumar Rocktim Narayan Singha', 'Student', '+918011806053', '2018-06-05', 2, 2);
-INSERT INTO `trainee` VALUES ('1528038565', 'Joy Saha', 'Teacher', '08974561230', '2018-06-04', 4, 2);
+INSERT INTO `trainee` VALUES ('1528051374', 'Govinda Poddar', 'Student', '8795462120', '2018-06-06', 1, 8);
 
 SET FOREIGN_KEY_CHECKS = 1;

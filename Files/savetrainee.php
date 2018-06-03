@@ -37,7 +37,7 @@
        echo "<head><script>alert('Trainee Added Failed');</script></head></html>";
        echo "error: ".mysqli_error($link);
        $query3 = "DELETE FROM trainee WHERE tid='$tid'";
-       mysqli_query($con,$query3);
+       mysqli_query($link,$query3);
     }
   }
   else{
