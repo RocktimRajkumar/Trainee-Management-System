@@ -36,6 +36,13 @@ $result = mysqli_query($link,$sql);
          <table width="100%" border="0" align="center">
          <tr>
            <td height="35"><table width="100%" border="0" align="center">
+              
+               <tr>
+           	   <td height="35">TRAINEE ID:</td>
+           	   <td height="35"><input name="fname" type="text" id="one" size="45" value="<?php echo time(); ?>" readonly></td>
+         	   </tr>
+             <tr>
+               
            	 <tr>
            	   <td height="35">FULL NAME:</td>
            	   <td height="35"><input name="fname" type="text" id="one" size="45"></td>
@@ -69,7 +76,7 @@ $result = mysqli_query($link,$sql);
                <td height="35"><input name="pno" type="text" size="45"></td>
              </tr>
 
-			   <tr>
+			   <tr id="protype">
                <td height="35">PROGRAM TYPE:</td>
                <td height="35"><select name="select" id="select" onchange="myProgram()"><?php
 			   
@@ -158,13 +165,13 @@ $result = mysqli_query($link,$sql);
 			   </td>
              </tr>
              
-             <table id="programtype">
+             <table id="programtype" width="100%" border="0" align="center">
 
              
              </table>
              
             <table>
-              <tr>
+              <tr id="dor">
 			  
                <td height="35">DATE OF REPORTING:</td>
                <td height="35"><input name="dor" type="date" size="45"></td>

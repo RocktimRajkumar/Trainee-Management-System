@@ -22,16 +22,16 @@ else if($t==4){
 $result = mysqli_query($link,$sql);
 if($result){
     $row=mysqli_fetch_row($result);
-    echo "<tr>
+    echo "<tr id='durconduct'>
     <td height='35'>".$text1."</td>
     <td height='35'><input name='duration' type='text' readonly value='".$row['2']."'></td>
     </tr>";
-    echo "<tr>
+    echo "<tr id='durissue'>
     <td height='35'>".$text2."</td>
     <td height='35'><input name='duration' type='text' readonly value='".$row['3']."'></td>
     </tr>";
     if($t==1 && $t==2)
-    echo "<tr>
+    echo "<tr id='venue'>
     <td height='35'>VENUE:</td>
     <td height='35'><input name='duration' type='text' readonly value='".$row['4']."'></td>
     </tr>";
