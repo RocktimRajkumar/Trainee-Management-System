@@ -52,31 +52,31 @@ $result = mysqli_query($link,$sql);
 			   
 			   <tr>
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><input name="venue" type="text" id="two" size="30"></td>
+               <td height="35"><input name="pname" type="text" size="30" required></td>
              </tr>
              <tr id="durationfrom">
                <td height="35">DURATION FROM:</td>
-               <td height="35"><input name="duration" type="date" id="three" size="30"></td>
+               <td height="35"><input name="durationfm" type="date" size="30"></td>
              </tr>
              
              <tr id="durationto">
                <td height="35">DURATION TO:</td>
-               <td height="35"><input name="duration" type="date" id="three" size="30"></td>
+               <td height="35"><input name="durationto" type="date" size="30"></td>
              </tr>
              
              <tr id="venue">
                <td height="35">VENUE:</td>
-               <td height="35"><input name="venue" type="text" id="two" size="30"></td>
+               <td height="35"><input name="venue" type="text"></td>
              </tr>
              
             <tr id="conduct_by">
                <td height="35">Conduct By: </td>
-               <td height="35"><input name="conduct" type="text" id="two" size="30"></td>
+               <td height="35"><input name="conduct" type="text"></td>
              </tr>
              
              <tr id="issue_by">
                <td height="35">Issue By: </td>
-               <td height="35"><input name="issue" type="text" id="two" size="30"></td>
+               <td height="35"><input name="issue" type="text"></td>
              </tr>
             
             

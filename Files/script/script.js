@@ -14,6 +14,9 @@ function myFunction() {
                 venue.style.display="table-row";
                 conduct_by.style.display="none";
                 issue_by.style.display="none";
+//               durationf.children[1].children[0].required=true;
+//               durationt.children[1].children[0].required=true;
+               venue.children[1].children[0].required=true;
             break;
             
         case "3":
@@ -22,6 +25,8 @@ function myFunction() {
                 venue.style.display="none";
                 conduct_by.style.display="table-row";
                 issue_by.style.display="table-row";
+//                conduct_by.children[1].children[0].required=true;
+//                issue_by.children[1].children[0].required=true;
             break;
         
         case "4":durationf.style.display="table-row";
@@ -29,6 +34,8 @@ function myFunction() {
                 venue.style.display="none";
                 conduct_by.style.display="none";
                 issue_by.style.display="none";
+//                durationf.children[1].children[0].required=true;
+//                durationt.children[1].children[0].required=true;
             break;
     }
 }
