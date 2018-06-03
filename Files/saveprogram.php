@@ -61,15 +61,15 @@
           }
           else{
                echo "<head><script>alert('Programme Added Failed');</script></head></html>";
-             echo error: ".mysqli_error($link);
-              $query3 = "DELETE FROM pro_schedule WHERE schedule_ID='".$uniqeno."';
+             echo "error: ".mysqli_error($link);
+              $query3 = "DELETE FROM pro_schedule WHERE schedule_ID='".$uniqeno."'";
              mysqli_query($con,$query3);
           }
     }
     else{
       echo "<head><script>alert('Programme Added Failed');</script></head></html>";
-       echo error: ".mysqli_error($link);
-      $query3 = "DELETE FROM pro_schedule WHERE schedule_ID='".$uniqeno."';
+      echo "error: ".mysqli_error($link);
+      $query3 = "DELETE FROM pro_schedule WHERE schedule_ID='".$uniqeno."'";
              mysqli_query($con,$query3);
     }
   }
