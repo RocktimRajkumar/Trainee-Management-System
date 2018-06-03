@@ -17,19 +17,13 @@ $result = mysqli_query($link,$sql);
 <link href="a1style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="./script/script.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="index_files/mbcsmbmcp.css" type="text/css" />
 </head>
 
 <body>
 
-<div class="a1-container a1-black">
-	<div class="a1-bar a1-black" style="width:800px; margin:0 auto;">
-   	  <div class="a1-bar-item a1-hover-blue"><a style="text-decoration:none;" href="index.php">Home</a></div>
-      <div class="a1-bar-item a1-hover-blue"><a style="text-decoration:none;" href="addprogram.php">Add Program</a></div> 
-      <div class="a1-bar-item a1-hover-blue"><a style="text-decoration:none;" href="addtrainee.php">Add Trainee</a></div> 
- <div class="a1-bar-item a1-hover-blue"><a style="text-decoration:none;" href="manageschedule.php">Manage Schedule</a></div>  	  
-          <div class="a1-bar-item a1-hover-blue"><a style="text-decoration:none;" href="logout.php">Logout</a></div>  
-    </div>
-</div>
+<?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 <div class="a1-container a1-small a1-padding-32" style="margin-top:2px; margin-bottom:2px;">
         <div class="a1-card-8 a1-light-gray" style="width:600px; margin:0 auto;">
