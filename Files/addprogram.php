@@ -32,7 +32,7 @@ $result = mysqli_query($link,$sql);
 		<div class="a1-container a1-dark-gray a1-center">
         	<h6>ADD PROGRAM</h6>
         </div>
-       <form id="form1" name="form1" method="post" class="a1-container" action="savetrainee.php">
+       <form id="form1" name="form1" method="post" class="a1-container" action="saveprogram.php">
          <table width="100%" border="0" align="center">
          <tr>
            <td height="35"><table width="100%" border="0" align="center">

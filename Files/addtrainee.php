@@ -39,7 +39,7 @@ $result = mysqli_query($link,$sql);
               
                <tr>
            	   <td height="35">TRAINEE ID:</td>
-           	   <td height="35"><input name="fname" type="text" id="one" size="45" value="<?php echo time(); ?>" readonly></td>
+           	   <td height="35"><input name="traineeID" type="text" id="one" size="45" value="<?php echo time(); ?>" readonly></td>
          	   </tr>
              <tr>
                
@@ -67,7 +67,7 @@ $result = mysqli_query($link,$sql);
              
              <tr>
                <td height="35">PIN:</td>
-               <td height="35"><input name="city" type="text"  size="45"></td>
+               <td height="35"><input name="pin" type="text"  size="45"></td>
                
              </tr>
              
@@ -78,7 +78,7 @@ $result = mysqli_query($link,$sql);
 
 			   <tr id="protype">
                <td height="35">PROGRAM TYPE:</td>
-               <td height="35"><select name="select" id="select" onchange="myProgram()"><?php
+               <td height="35"><select name="protype" id="select" onchange="myProgram()"><?php
 			   
 			  while($row = mysqli_fetch_assoc($result)) 
 											{
@@ -92,7 +92,7 @@ $result = mysqli_query($link,$sql);
 			 
 			 <tr id="oncampus">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="select" id="select" onchange="myProgramType(this.value,1)">
+               <td height="35"><select name="pnameOn" id="select" onchange="myProgramType(this.value,1)">
                <option value="0">--Please select--</option>
                       <?php 
 							$sql = ("select * from oncampus");
@@ -111,7 +111,7 @@ $result = mysqli_query($link,$sql);
              
              <tr id="offcampus">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="select" id="select" onchange="myProgramType(this.value,2)">
+               <td height="35"><select name="pnameOff" id="select" onchange="myProgramType(this.value,2)">
                        <option value="0">--Please select--</option>
                        <?php 
 							$sql = ("select * from offcampus");
@@ -130,7 +130,7 @@ $result = mysqli_query($link,$sql);
              
              <tr id="research">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="select" id="select" onchange="myProgramType(this.value,3)">
+               <td height="35"><select name="pnameRe" id="select" onchange="myProgramType(this.value,3)">
                <option value="0">--Please select--</option>
                     <?php 
 							$sql = ("select * from researchstudy");
@@ -149,7 +149,7 @@ $result = mysqli_query($link,$sql);
              
              <tr id="pgdaem">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="select" id="select" onchange="myProgramType(this.value,4)">
+               <td height="35"><select name="pnamePg" id="select" onchange="myProgramType(this.value,4)">
                <option value="0">--Please select--</option>
                    <?php 
 							$sql = ("select * from pgdaem");
@@ -174,7 +174,7 @@ $result = mysqli_query($link,$sql);
               <tr id="dor">
 			  
                <td height="35">DATE OF REPORTING:</td>
-               <td height="35"><input name="dor" type="date" size="45"></td>
+               <td height="35"><input name="dor" type="date" size="45" required></td>
              </tr>
              <tr>
              <tr>
