@@ -30,7 +30,7 @@ if($result){
     <td height='35'>".$text2."</td>
     <td height='35'><input name='duration' type='text' readonly value='".$row['3']."'></td>
     </tr>";
-    if($t==1 && $t==2)
+    if($t==1 || $t==2)
     echo "<tr id='venue'>
     <td height='35'>VENUE:</td>
     <td height='35'><input name='duration' type='text' readonly value='".$row['4']."'></td>

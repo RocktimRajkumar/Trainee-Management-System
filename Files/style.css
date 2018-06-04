@@ -21,6 +21,11 @@
     
 }
 
+#crschedule{
+    display:none;
+}
+
+
 #conduct_by,#issue_by{
     display: none;
 }
