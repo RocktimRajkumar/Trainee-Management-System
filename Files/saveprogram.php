@@ -37,20 +37,15 @@
                 $query="insert into offcampus(title,durationfrom,durationto,venue,type_id,scheduleID) values('".$pname."','".$durfrom."','".$durto."','".$venue."',".$ptype.",'".$uniqeno."')";
             }
             else if($ptype=="3"){
-                $conduct=$_POST['conduct'];
-                $issue=$_POST['issue'];
-                
-                $query="insert into researchstudy(title,conductby,issue,type_id,scheduleID) values('".$pname."','".$conduct."','".$issue."',".$ptype.",'".$uniqeno."')";
-            }
-            else if($ptype=="4"){
                 $durfrom=$_POST['durationfm'];
                 $durto=$_POST['durationto'];
+                $venue=$_POST['venue'];
                 if($durfrom=="")
                     $durfrom="Dates to be decided";
                 if($durto=="")
                     $durto="Dates to be decided";
                 
-                $query="insert into pgdaem(title,durationfrom,durationto,type_id,scheduleID) values('".$pname."','".$durfrom."','".$durto."',".$ptype.",'".$uniqeno."')";
+                $query="insert into regional(title,durationfrom,durationto,venue,type_id,scheduleID) values('".$pname."','".$durfrom."','".$durto."','".$venue."',".$ptype.",'".$uniqeno."')";
             }
           else
               $query="nana";

@@ -2,9 +2,7 @@
 
 <?php
  include "connect.php";
- $sql = ("select * from programme");
 session_start();
-$result = mysqli_query($link,$sql);
  if(!isset($_SESSION["adminlogin"]))
 {
 	header("location:index.php");
@@ -65,7 +63,7 @@ $result = mysqli_query($link,$sql);
              </tr>
           
             
-             
+             <tr>
                <td height="35">&nbsp;</td>
                <td height="35"><input class="a1-btn a1-blue" type="submit" name="submit" id="submit" value="Register" >
                  <input class="a1-btn a1-blue" type="reset" name="reset" id="reset" value="Reset"></td>

@@ -126,12 +126,12 @@ $result = mysqli_query($link,$sql);
              </tr>
              
              
-             <tr id="research">
+             <tr id="regional">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="pnameRe" id="select" onchange="myProgramType(this.value,3)">
-               <option value="0">--Please select--</option>
-                    <?php 
-							$sql = ("select * from researchstudy");
+               <td height="35"><select name="pnameRegional" id="select" onchange="myProgramType(this.value,3)">
+                       <option value="0">--Please select--</option>
+                       <?php 
+							$sql = ("select * from regional");
                             $result = mysqli_query($link,$sql);
                             while($row = mysqli_fetch_assoc($result)) 
 											{
@@ -145,23 +145,7 @@ $result = mysqli_query($link,$sql);
              </tr>
              
              
-             <tr id="pgdaem">
-               <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="pnamePg" id="select" onchange="myProgramType(this.value,4)">
-               <option value="0">--Please select--</option>
-                   <?php 
-							$sql = ("select * from pgdaem");
-                            $result = mysqli_query($link,$sql);
-                            while($row = mysqli_fetch_assoc($result)) 
-											{
-												echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
-												
-												
-											}
-											?></select>
-
-			   </td>
-             </tr>
+            
              
              <table id="programtype" width="100%" border="0" align="center">
 
@@ -180,7 +164,7 @@ $result = mysqli_query($link,$sql);
                <td height="35"><input class="a1-btn a1-blue" type="submit" name="submit" id="submit" value="Register" >
                  <input class="a1-btn a1-blue" type="reset" name="reset" id="reset" value="Reset"></td>
              </tr>
-           </table></td>
+               </table></table></td>
          </tr>
          </table>
        </form>

@@ -26,11 +26,7 @@
 }
 
 
-#conduct_by,#issue_by{
-    display: none;
-}
-
-#offcampus,#research,#pgdaem{
+#offcampus,#regional{
     display:none;
 }
 
@@ -38,7 +34,7 @@
     width: 330px;
 }
 
-#oncampus td select, #offcampus td select, #research td select, #pgdaem td select, #dor td input{
+#oncampus td select, #offcampus td select, #regional td select,#dor td input{
     width:330px;
 }
 

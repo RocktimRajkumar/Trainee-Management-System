@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 19/06/2018 21:49:05
+ Date: 19/06/2018 22:30:30
 */
 
 SET NAMES utf8mb4;
@@ -141,6 +141,7 @@ CREATE TABLE `pro_schedule`  (
 -- ----------------------------
 INSERT INTO `pro_schedule` VALUES ('180604000648', 'Skill Development for m-Extension and e-Extension');
 INSERT INTO `pro_schedule` VALUES ('180604030612', 'Communication and Training Skills for Efficient Extension Service');
+INSERT INTO `pro_schedule` VALUES ('180619220657', 'Managerial Skills and Leadership Development');
 
 -- ----------------------------
 -- Table structure for programme
@@ -179,6 +180,31 @@ CREATE TABLE `pschedule`  (
 -- ----------------------------
 INSERT INTO `pschedule` VALUES ('180604000648', NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `pschedule` VALUES ('180604030612', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `pschedule` VALUES ('180619220657', NULL, NULL, NULL, NULL, NULL);
+
+-- ----------------------------
+-- Table structure for regional
+-- ----------------------------
+DROP TABLE IF EXISTS `regional`;
+CREATE TABLE `regional`  (
+  `sn` int(4) NOT NULL AUTO_INCREMENT,
+  `title` varchar(245) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `durationfrom` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `durationto` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `venue` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `type_id` int(4) NOT NULL,
+  `scheduleID` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  PRIMARY KEY (`sn`) USING BTREE,
+  INDEX `type_id`(`type_id`) USING BTREE,
+  INDEX `pross_idx`(`scheduleID`) USING BTREE,
+  CONSTRAINT `regional_ibfk_1` FOREIGN KEY (`scheduleID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `regional_ibfk_2` FOREIGN KEY (`type_id`) REFERENCES `programme` (`type_id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of regional
+-- ----------------------------
+INSERT INTO `regional` VALUES (9, 'Managerial Skills and Leadership Development', '2018-12-11', '2018-12-11', 'EEI(NEW REGION) AAU,JORHAT', 3, '180619220657');
 
 -- ----------------------------
 -- Table structure for researchstudy
