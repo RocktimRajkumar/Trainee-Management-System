@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>PGDAEM | Add Trainee</title>
+    <title>PGDAEM | Upload Result</title>
     <link href="a1style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="./script/script.js"></script>
@@ -12,7 +12,7 @@
 <body>
   <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
-   <form action="savepgdaem.php" method="POST">
+   <form action="savepgdaemresult.php" method="POST" enctype="multipart/form-data">
     <table>
         <tr>
             <td><label for="program">Program:</label></td>
@@ -42,45 +42,12 @@
                 <option value="2nd">2nd</option>
             </select></td>
         </tr>
+        
+        <tr><td colspan='2'><input type="file" name="file" size="50"  accept="application/PDF"/>
+        </td></tr>
+        
         <tr>
-            <td><label for="name">Candidate Name:</label></td>
-            <td><input id="Name" name='canname' type="text"></td>
-        </tr>
-        <tr>
-            <td><label for="id">Candidate ID:</label></td>
-            <td><input type="text" name="id" id="id" value='<?php echo time(); ?>'></td>
-        </tr>
-        <tr>
-            <td><label for="designation">Designation:</label></td>
-            <td><input type="text" name="designation" id="designation"></td>
-        </tr>
-        <tr>
-            <td><label for="address">Address</label></td>
-            <td><input name='address' type="text" id="address"></td>
-        </tr>
-        <tr>
-            <td><label for="phone">Phone NO: </label></td>
-            <td><input type="text" name="phoneno" id="phone"></td>
-        </tr>
-        <tr>
-            <td><label for="email">Email:</label></td>
-            <td><input type="email" name="email" id="email"></td>
-        </tr>
-        <tr>
-            <td><label for="qualificationi">Qualification:</label></td>
-            <td><input type="text" name="qualification" id="qualification"></td>
-        </tr>
-        <tr>
-            <td><label for="discipline">Discipline:</label></td>
-            <td><input type="text" name="discipline" id="discipline"></td>
-        </tr>
-        <tr>
-            <td><label for="lenofservice">Length Of Service:</label></td>
-            <td><input type="text" name="lenofservice" id="lenofservice"></td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="Submit"></td>
-            <td><input type="reset" value="Reset"></td>
+            <td><input type="submit" value="upload"></td>
         </tr>
     </table>
 </form>

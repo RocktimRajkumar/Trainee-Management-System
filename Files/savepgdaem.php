@@ -17,7 +17,7 @@ require 'connect.php';
     $semester=$_POST['semester'];
 
 
-   //Inserting data into plan table
+   //Inserting data into pgdaem table
     $query="insert into pgdaem(batch,state,semester,canname,designation,address,phoneno,email,qualification,discipline,lenofservice,canId) values('$batch','$state','$semester','$canname','$designation','$address',$phoneno,'$email','$qualification','$discipline','$lenofservice','$canid')";
    
    
