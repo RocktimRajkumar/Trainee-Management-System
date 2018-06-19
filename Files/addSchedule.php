@@ -71,9 +71,10 @@ $result = mysqli_query($link,$sql);
        </form>
     </div>
     </div>   
+    
 
-
-    <script>   
+    
+<script>   
     function myProgramName(str){
     if (str == "0") {
         document.getElementById("programName").innerHTML = "";
@@ -129,6 +130,7 @@ $result = mysqli_query($link,$sql);
       }
       
   }
+    
     
 </script>
 

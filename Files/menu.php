@@ -1,5 +1,5 @@
 <div class="a1-container a1-black">
-<div id="mbmcpebul_wrapper" style="max-width: 780px;">
+<div id="mbmcpebul_wrapper" style="max-width: 898px;">
   <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu">
   <li><div class="buttonbg gradient_button gradient58"><div class="icon_1"><a href="admin.php" class="button_1">Home</a></div></div></li>
   <li><div class="buttonbg gradient_button gradient58" style="width: 145px;"><div class="arrow"><div class="icon_2"><a>Program</a></div></div></div>
@@ -20,6 +20,7 @@
     <li class="gradient_menuitem gradient36"><a class="with_img_16" title=""><img src="index_files/mbico_mbmcp_8.png" alt="" />Edit Schedule</a></li>
     <li class="gradient_menuitem gradient36 last_item"><a class="with_img_16" title=""><img src="index_files/mbico_mbmcp_9.png" alt="" />Delete Schedule</a></li>
     </ul></li>
+     <li><div class="buttonbg gradient_button gradient58" style="width: 116px;"><div class="icon_5"><a href="pgdaem.php" class="button_5">PGDAEM </a></div></div></li>
   <li><div class="buttonbg gradient_button gradient58" style="width: 116px;"><div class="icon_5"><a class="button_5">Report</a></div></div></li>
   <li><div class="buttonbg gradient_button gradient58" style="width: 119px;"><div class="icon_6"><a href="logout.php" class="button_6">Logout</a></div></div></li>
   </ul>

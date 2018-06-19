@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 04/06/2018 00:18:11
+ Date: 04/06/2018 14:24:43
 */
 
 SET NAMES utf8mb4;
@@ -66,7 +66,12 @@ CREATE TABLE `offcampus`  (
   INDEX `sID_idx`(`scheduleID`) USING BTREE,
   CONSTRAINT `program_type` FOREIGN KEY (`type_id`) REFERENCES `programme` (`type_id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `pros` FOREIGN KEY (`scheduleID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of offcampus
+-- ----------------------------
+INSERT INTO `offcampus` VALUES (6, 'Communication and Training Skills for Efficient Extension Service', '2018-06-23', '2018-06-26', 'SAMETI,Manipuar', 2, '180604030612');
 
 -- ----------------------------
 -- Table structure for oncampus
@@ -85,12 +90,12 @@ CREATE TABLE `oncampus`  (
   INDEX `pross_idx`(`scheduleID`) USING BTREE,
   CONSTRAINT `ptype` FOREIGN KEY (`type_id`) REFERENCES `programme` (`type_id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `pross` FOREIGN KEY (`scheduleID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of oncampus
 -- ----------------------------
-INSERT INTO `oncampus` VALUES (8, 'Skill Development for m-Extension and e-Extension', '2018-05-09', '2018-05-12', 'EEI(NE Region) AAU,Jorhat', 1, '180604000648');
+INSERT INTO `oncampus` VALUES (8, 'Skill Development for m-Extension and e-Extension', '2018-05-09', '2018-05-13', 'EEI(NE Region) AAU,Jorhat', 1, '180604000648');
 
 -- ----------------------------
 -- Table structure for pgdaem
@@ -124,6 +129,7 @@ CREATE TABLE `pro_schedule`  (
 -- Records of pro_schedule
 -- ----------------------------
 INSERT INTO `pro_schedule` VALUES ('180604000648', 'Skill Development for m-Extension and e-Extension');
+INSERT INTO `pro_schedule` VALUES ('180604030612', 'Communication and Training Skills for Efficient Extension Service');
 
 -- ----------------------------
 -- Table structure for programme
@@ -162,6 +168,7 @@ CREATE TABLE `pschedule`  (
 -- Records of pschedule
 -- ----------------------------
 INSERT INTO `pschedule` VALUES ('180604000648', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `pschedule` VALUES ('180604030612', NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for researchstudy

@@ -36,15 +36,12 @@ $result = mysqli_query($link,$sql);
            <td height="35"><table width="100%" border="0" align="center">
            	 <tr>
            	   <td height="35">PROGRAM TYPE:</td>
-           	   <td height="35"><select name="select" id="select" onchange="myFunction()"><?php
-			   
-			  while($row = mysqli_fetch_assoc($result)) 
-											{
-												echo '<option value='.$row["type_id"].'>'.$row["type"].'</a></option>';
-												
-												
-											}
-											?>
+           	   <td height="35"><select name="select" id="select">
+
+                <option value='1'>ONCAMPUS</option>;
+                <option value='2'>OFFCAMPUS</option>;
+                <option value='3'>REGIONAL WORKSHOP</option>;
+										
                 </select></td>
          	   </tr>
 			   
@@ -66,17 +63,7 @@ $result = mysqli_query($link,$sql);
                <td height="35">VENUE:</td>
                <td height="35"><input name="venue" type="text"></td>
              </tr>
-             
-            <tr id="conduct_by">
-               <td height="35">Conduct By: </td>
-               <td height="35"><input name="conduct" type="text"></td>
-             </tr>
-             
-             <tr id="issue_by">
-               <td height="35">Issue By: </td>
-               <td height="35"><input name="issue" type="text"></td>
-             </tr>
-            
+          
             
              
                <td height="35">&nbsp;</td>
