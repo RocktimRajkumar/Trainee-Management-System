@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 19/06/2018 23:03:24
+ Date: 20/06/2018 00:24:04
 */
 
 SET NAMES utf8mb4;
@@ -126,6 +126,43 @@ INSERT INTO `pgdaem` VALUES (1, 'abc', 'def', 'hij', 'klm', 0x797979, 'nop', 'qr
 INSERT INTO `pgdaem` VALUES (2, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', 1234, 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
 INSERT INTO `pgdaem` VALUES (3, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', 1234, 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
 INSERT INTO `pgdaem` VALUES (4, '2014-15', 'assam', '1st', 'Biraj', 0x31353239343137323330, 'stuent', 'titabor', 8976332, 'biraj@gmail.com', '12th', 'pgd', '2');
+
+-- ----------------------------
+-- Table structure for pgdaemmaterial
+-- ----------------------------
+DROP TABLE IF EXISTS `pgdaemmaterial`;
+CREATE TABLE `pgdaemmaterial`  (
+  `sn` int(3) NOT NULL AUTO_INCREMENT,
+  `batch` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `state` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `semester` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `result` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`sn`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of pgdaemmaterial
+-- ----------------------------
+INSERT INTO `pgdaemmaterial` VALUES (3, '2014-15', 'assam', '1st', './pgdaemmaterial/standardColor.txt');
+
+-- ----------------------------
+-- Table structure for pgdaemresult
+-- ----------------------------
+DROP TABLE IF EXISTS `pgdaemresult`;
+CREATE TABLE `pgdaemresult`  (
+  `sn` int(3) NOT NULL AUTO_INCREMENT,
+  `batch` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `state` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `semester` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `result` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`sn`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of pgdaemresult
+-- ----------------------------
+INSERT INTO `pgdaemresult` VALUES (1, '2014-15', 'assam', '1st', './pgdaemresult/Typing 19th May 2018.pdf');
+INSERT INTO `pgdaemresult` VALUES (2, '2017-18', 'assam', '1st', './pgdaemresult/Typing 21st May 2018.pdf');
 
 -- ----------------------------
 -- Table structure for pro_schedule
