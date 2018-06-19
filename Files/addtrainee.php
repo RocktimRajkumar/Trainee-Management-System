@@ -73,6 +73,21 @@ $result = mysqli_query($link,$sql);
                <td height="35">PHONE NO:</td>
                <td height="35"><input name="pno" type="text" size="45"></td>
              </tr>
+             
+             <tr>
+               <td height="35">Email:</td>
+               <td height="35"><input name="email" type="email" size="45"></td>
+             </tr>
+             
+             <tr>
+               <td height="35">Qualification:</td>
+               <td height="35"><input name="qualification" type="text" size="45"></td>
+             </tr>
+             
+             <tr>
+               <td height="35">Discipline:</td>
+               <td height="35"><input name="discipline" type="text" size="45"></td>
+             </tr>
 
 			   <tr id="protype">
                <td height="35">PROGRAM TYPE:</td>

@@ -9,6 +9,9 @@
  $state=$_POST['state'];
  $pin=$_POST['pin'];
  $phn=$_POST['pno'];
+ $email=$_POST['email'];
+ $quali=$_POST['qualification'];
+ $disci=$_POST['discipline'];
  $pname="";
  $DOR=$_POST['dor'];
  
@@ -19,13 +22,10 @@
      $pname=$_POST['pnameOff'];
  }
  else if($ptype=="3"){
-     $pname=$_POST['pnameRe'];
- }
- else if($ptype=="4"){
-     $pname=$_POST['pnamePg'];
+     $pname=$_POST['pnameRegional'];
  }
 
-  $query="insert into trainee(tid,tname,degisnation,phn,DOR,type_id,sn) values('".$tid."','".$tname."','".$deg."','".$phn."','".$DOR."','".$ptype."','".$pname."')";
+  $query="insert into trainee(tid,tname,degisnation,phn,DOR,type_id,sn,email,qualification,discipline) values('".$tid."','".$tname."','".$deg."','".$phn."','".$DOR."','".$ptype."','".$pname."','".$email."','".$quali."','".$disci."')";
 
   if(mysqli_query($link,$query)==1){
        

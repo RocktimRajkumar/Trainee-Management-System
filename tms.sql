@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 19/06/2018 22:30:30
+ Date: 19/06/2018 23:03:24
 */
 
 SET NAMES utf8mb4;
@@ -34,6 +34,7 @@ CREATE TABLE `address`  (
 -- Records of address
 -- ----------------------------
 INSERT INTO `address` VALUES ('1528051374', 'Jorhat', 'Assam', 'JPR');
+INSERT INTO `address` VALUES ('1529429536', 'Mumbai', 'Maharastra', 'Andhari');
 
 -- ----------------------------
 -- Table structure for admin
@@ -253,5 +254,6 @@ CREATE TABLE `trainee`  (
 -- Records of trainee
 -- ----------------------------
 INSERT INTO `trainee` VALUES ('1528051374', 'Govinda Poddar', 'Student', '8795462120', '2018-06-06', 1, 8, NULL, NULL, NULL);
+INSERT INTO `trainee` VALUES ('1529429536', 'Telusko', 'Teacher', '7896543210', '2018-06-19', 3, 9, 'Graduate', 'telusko@gmail.com', 'Regional');
 
 SET FOREIGN_KEY_CHECKS = 1;
