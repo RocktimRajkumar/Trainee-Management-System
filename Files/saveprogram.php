@@ -9,9 +9,6 @@
   $sql="insert into pro_schedule(schedule_ID,schedule_name) values('".$uniqeno."','".$pname."')";
   if(mysqli_query($link,$sql)==1)
   {
-      $sql1="insert into pschedule(schedule_ID) values('".$uniqeno."') ";
-      if(mysqli_query($link,$sql1)==1)
-      {
            $query="";
             if($ptype=="1"){
                 $durfrom=$_POST['durationfm'];
@@ -60,14 +57,7 @@
               $query3 = "DELETE FROM pro_schedule WHERE schedule_ID='".$uniqeno."'";
              mysqli_query($link,$query3);
           }
-    }
-    else{
-      echo "<head><script>alert('Programme Added Failed');</script></head></html>";
-      echo "error:  ".mysqli_error($link);
-      $query3 = "DELETE FROM pro_schedule WHERE schedule_ID='".$uniqeno."'";
-        mysqli_query($link,$query3);
-             
-    }
+
   }
   else{
       echo "<head><script>alert('Programme Added Failed');</script></head></html>";

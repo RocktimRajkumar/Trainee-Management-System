@@ -9,13 +9,9 @@ else if($t==2){
     $sql="SELECT * FROM offcampus";
 }
 else if($t==3){
-    $sql="SELECT * FROM researchstudy";
-    $text1="Conduct By";
-    $text2="Issue By";
+    $sql="SELECT * FROM regional";
 }
-else if($t==4){
-    $sql="SELECT * FROM pgdaem";
-}
+
 
 
 $result=mysqli_query($link,$sql);
@@ -25,7 +21,7 @@ echo "<tr>
     <option value='0'>--Please select--</option>";
 while($row=mysqli_fetch_assoc($result)){
     
-    echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
+    echo '<option value='.$row["scheduleID"].'>'.$row["title"].'</option>';
     
     
 }

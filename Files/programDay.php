@@ -2,19 +2,17 @@
 
 include "connect.php";
 $t=intval($_GET['t']);
-$q=intval($_GET['q']);
+$q=$_GET['q'];
 if($t==1){
-    $sql="SELECT * FROM oncampus where sn=".$q;   
+    $sql="SELECT * FROM oncampus where scheduleID=".$q;   
 }
 else if($t==2){
-    $sql="SELECT * FROM offcampus where sn=".$q;
+    $sql="SELECT * FROM offcampus where scheduleID=".$q;
 }
 else if($t==3){
-    $sql="SELECT * FROM researchstudy where sn=".$q;
+    $sql="SELECT * FROM regional where scheduleID=".$q;
 }
-else if($t==4){
-    $sql="SELECT * FROM pgdaem where sn=".$q;
-}
+
 
 
 $result=mysqli_query($link,$sql);

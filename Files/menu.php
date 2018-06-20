@@ -1,5 +1,5 @@
 <div class="a1-container a1-black">
-<div id="mbmcpebul_wrapper" style="max-width: 917px;">
+<div id="mbmcpebul_wrapper" style="width:fit-content">
   <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu">
   <li><div class="buttonbg gradient_button gradient58"><div class="icon_1"><a href="admin.php" class="button_1">Home</a></div></div></li>
   <li><div class="buttonbg gradient_button gradient58" style="width: 145px;"><div class="arrow"><div class="icon_2"><a>Program</a></div></div></div>
@@ -30,8 +30,10 @@
     <li class="gradient_menuitem gradient36 last_item"><a href="uploadpgdaem.php" class="with_img_16" title=""><img src="index_files/mbico_mbmcp_6.png" alt="" />Upload Result</a></li>
     </ul></li>
     
+   <li><div class="buttonbg gradient_button gradient58" style="width: 116px;"><div class="icon_5"><a href="research.php" class="button_5">Research</a></div></div></li>     
      
   <li><div class="buttonbg gradient_button gradient58" style="width: 116px;"><div class="icon_5"><a class="button_5">Report</a></div></div></li>
+  
   <li><div class="buttonbg gradient_button gradient58" style="width: 119px;"><div class="icon_6"><a href="logout.php" class="button_6">Logout</a></div></div></li>
   </ul>
 </div>

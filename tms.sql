@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 20/06/2018 00:24:04
+ Date: 21/06/2018 01:09:15
 */
 
 SET NAMES utf8mb4;
@@ -67,12 +67,13 @@ CREATE TABLE `offcampus`  (
   INDEX `sID_idx`(`scheduleID`) USING BTREE,
   CONSTRAINT `program_type` FOREIGN KEY (`type_id`) REFERENCES `programme` (`type_id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `pros` FOREIGN KEY (`scheduleID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of offcampus
 -- ----------------------------
 INSERT INTO `offcampus` VALUES (6, 'Communication and Training Skills for Efficient Extension Service', '2018-06-23', '2018-06-26', 'SAMETI,Manipuar', 2, '180604030612');
+INSERT INTO `offcampus` VALUES (7, 'Workshop on Climate Smart Agriculture and Disaster Management in Assam', '2018-11-07', '2018-11-10', 'SAMETI,Assam', 2, '180621000642');
 
 -- ----------------------------
 -- Table structure for oncampus
@@ -91,12 +92,13 @@ CREATE TABLE `oncampus`  (
   INDEX `pross_idx`(`scheduleID`) USING BTREE,
   CONSTRAINT `pross` FOREIGN KEY (`scheduleID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `ptype` FOREIGN KEY (`type_id`) REFERENCES `programme` (`type_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of oncampus
 -- ----------------------------
 INSERT INTO `oncampus` VALUES (8, 'Skill Development for m-Extension and e-Extension', '2018-05-09', '2018-05-13', 'EEI(NE Region) AAU,Jorhat', 1, '180604000648');
+INSERT INTO `oncampus` VALUES (9, 'Management Games and Interactive Training Tools', '2018-11-14', '2018-11-17', 'SAMETI, Manipur', 1, '180620120645');
 
 -- ----------------------------
 -- Table structure for pgdaem
@@ -180,6 +182,8 @@ CREATE TABLE `pro_schedule`  (
 INSERT INTO `pro_schedule` VALUES ('180604000648', 'Skill Development for m-Extension and e-Extension');
 INSERT INTO `pro_schedule` VALUES ('180604030612', 'Communication and Training Skills for Efficient Extension Service');
 INSERT INTO `pro_schedule` VALUES ('180619220657', 'Managerial Skills and Leadership Development');
+INSERT INTO `pro_schedule` VALUES ('180620120645', 'Management Games and Interactive Training Tools');
+INSERT INTO `pro_schedule` VALUES ('180621000642', 'Workshop on Climate Smart Agriculture and Disaster Management in Assam');
 
 -- ----------------------------
 -- Table structure for programme
@@ -206,19 +210,22 @@ CREATE TABLE `pschedule`  (
   `schedule_ID` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `pdays` int(4) NULL DEFAULT NULL,
   `time` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `psession` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `methods` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `facilitator` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  INDEX `pro_schdule`(`schedule_ID`) USING BTREE,
-  CONSTRAINT `pro_schdule` FOREIGN KEY (`schedule_ID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE CASCADE ON UPDATE NO ACTION
+  `psession` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `methods` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `facilitator` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `sn` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pschedule
 -- ----------------------------
-INSERT INTO `pschedule` VALUES ('180604000648', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180604030612', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `pschedule` VALUES ('180619220657', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `pschedule` VALUES ('180604030612', 1, '9.30-10.00', 'Registration', '', 'Ms.M.Dutta', '0');
+INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.00-10.30', 'Introductory session', '', '', '1');
+INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.30-10.45', 'Tea Break', 'Tea Break', 'Tea Break', '2');
+INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.45-11.30', 'Course briefing and Training Need Assessment/Pre-course evaluation', 'Briefing-Proforma', 'Dr.S.Borua,EEI,Jorhat', '3');
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '09.30-11.15', 'Management Game -II', 'Interactive session   Presentation', 'Dr. B.L. Khuhly, SAMETI, Mizoram', '0');
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '11.15-11.30', 'Tea Break', 'Tea Break', 'Tea Break', '1');
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '11.30-01.00', 'Management Game-III', 'Group work  presentation input', 'Dr.A.K.Bhattacharyya', '2');
 
 -- ----------------------------
 -- Table structure for regional
@@ -245,27 +252,19 @@ CREATE TABLE `regional`  (
 INSERT INTO `regional` VALUES (9, 'Managerial Skills and Leadership Development', '2018-12-11', '2018-12-11', 'EEI(NEW REGION) AAU,JORHAT', 3, '180619220657');
 
 -- ----------------------------
--- Table structure for researchstudy
+-- Table structure for researchreport
 -- ----------------------------
-DROP TABLE IF EXISTS `researchstudy`;
-CREATE TABLE `researchstudy`  (
-  `sn` int(4) NOT NULL AUTO_INCREMENT,
-  `title` varchar(245) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `conductby` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `issue` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `type_id` int(4) NOT NULL,
-  `scheduleID` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  PRIMARY KEY (`sn`) USING BTREE,
-  INDEX `type_id`(`type_id`) USING BTREE,
-  INDEX `prossss_idx`(`scheduleID`) USING BTREE,
-  CONSTRAINT `prossss` FOREIGN KEY (`scheduleID`) REFERENCES `pro_schedule` (`schedule_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `protype` FOREIGN KEY (`type_id`) REFERENCES `programme` (`type_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+DROP TABLE IF EXISTS `researchreport`;
+CREATE TABLE `researchreport`  (
+  `sn` int(3) NOT NULL AUTO_INCREMENT,
+  `report` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`sn`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of researchstudy
+-- Records of researchreport
 -- ----------------------------
-INSERT INTO `researchstudy` VALUES (2, 'Block Chin Working Principle', 'Rocktim', 'Charles Xavier', 3, '180603140631');
+INSERT INTO `researchreport` VALUES (3, './reserachreport/SSL-Installation.pdf');
 
 -- ----------------------------
 -- Table structure for trainee
