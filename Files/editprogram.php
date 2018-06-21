@@ -76,7 +76,7 @@ function myProgram1(){
          </tr>
     </table>>
 
-<table class="table table-bordered datatable" id="table-1" border=1 align="center" style="margin-top:10px; width:1020px">
+<table class="" id="table-1" border=1 align="center" style="margin-top:10px; width:1020px">
 
 		
 				<tr>
@@ -100,7 +100,7 @@ function myProgram1(){
 
 					if (mysqli_affected_rows($link) != 0) {
 					    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-					        $msgid = $row['sn'];
+					        $msgid = $row['scheduleID'];
 					        
 					        
 					        echo "<tr><td>" . $sno . "</td>";
@@ -112,7 +112,7 @@ function myProgram1(){
 					        
 					        $sno++;
 					        
-					        echo '<td><a href=editprogramdetails.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
+					        echo '<td><a href=editoncampus.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleteoncampus.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
 					        
 							$msgid = 0;
 					    }
@@ -126,7 +126,7 @@ function myProgram1(){
 		
 		
 		
-		<table class="table table-bordered datatable" id="table-2" border=1 align="center" style="margin-top:10px; width:1020px">
+		<table class="a1-padding-12" id="table-2" border=1 align="center" style="margin-top:10px; width:1020px; ">
 
 		
 				<tr>
@@ -150,7 +150,7 @@ function myProgram1(){
 
 					if (mysqli_affected_rows($link) != 0) {
 					    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-					        $msgid = $row['sn'];
+					        $msgid = $row['scheduleID'];
 					        
 					        
 					        echo "<tr><td>" . $sno . "</td>";
@@ -162,7 +162,7 @@ function myProgram1(){
 					        
 					        $sno++;
 					        
-					        echo '<td><a href=editprogramdetails.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
+					        echo '<td><a href=editoffcampus.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleteoffcampus.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="boxxe" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
 					        
 							$msgid = 0;
 					    }
@@ -198,7 +198,7 @@ function myProgram1(){
 
 					if (mysqli_affected_rows($link) != 0) {
 					    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-					        $msgid = $row['sn'];
+					        $msgid = $row['scheduleID'];
 					        
 					        
 					        echo "<tr><td>" . $sno . "</td>";
@@ -210,7 +210,7 @@ function myProgram1(){
 					        
 					        $sno++;
 					        
-					        echo '<td><a href=editprogramdetails.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
+					        echo '<td><a href=editregional.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleteregional.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
 					        
 							$msgid = 0;
 					    }
