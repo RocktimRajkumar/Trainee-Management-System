@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 21/06/2018 01:09:15
+ Date: 22/06/2018 02:36:44
 */
 
 SET NAMES utf8mb4;
@@ -213,19 +213,19 @@ CREATE TABLE `pschedule`  (
   `psession` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `methods` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `facilitator` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `sn` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL
+  `sn` int(20) NULL DEFAULT NULL
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pschedule
 -- ----------------------------
-INSERT INTO `pschedule` VALUES ('180604030612', 1, '9.30-10.00', 'Registration', '', 'Ms.M.Dutta', '0');
-INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.00-10.30', 'Introductory session', '', '', '1');
-INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.30-10.45', 'Tea Break', 'Tea Break', 'Tea Break', '2');
-INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.45-11.30', 'Course briefing and Training Need Assessment/Pre-course evaluation', 'Briefing-Proforma', 'Dr.S.Borua,EEI,Jorhat', '3');
-INSERT INTO `pschedule` VALUES ('180619220657', 1, '09.30-11.15', 'Management Game -II', 'Interactive session   Presentation', 'Dr. B.L. Khuhly, SAMETI, Mizoram', '0');
-INSERT INTO `pschedule` VALUES ('180619220657', 1, '11.15-11.30', 'Tea Break', 'Tea Break', 'Tea Break', '1');
-INSERT INTO `pschedule` VALUES ('180619220657', 1, '11.30-01.00', 'Management Game-III', 'Group work  presentation input', 'Dr.A.K.Bhattacharyya', '2');
+INSERT INTO `pschedule` VALUES ('180604030612', 1, '9.30-10.00', 'Preparation of Report on Field Visit', 'Group Work Presentation', 'Dr.S.Borua,EEI,Jorhat', 0);
+INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.00-10.30', 'Tea Break', 'Tea Break', 'Tea Break', 1);
+INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.30-10.45', 'Back at Work Plan', 'Individual exercise Presentation', 'Dr.S.Borua,EEI,Jorhat', 2);
+INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.45-11.30', 'Consolidation of Lessons Learnt', 'Group Task presentation', 'Ms.P.Sharma, EEi,Jorhat', 3);
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '09.30-11.15', 'Management Game -II', 'Interactive session Presentation', 'Dr. B.L. Khuhly, SAMETI, Mizoram', 0);
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '11.15-11.30', 'Tea Break', 'Tea Break', 'Tea Break', 1);
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '11.30-01.00', 'Management Game-III', 'Group work  presentation input', 'Dr.A.K.Bhattacharyya', 2);
 
 -- ----------------------------
 -- Table structure for regional

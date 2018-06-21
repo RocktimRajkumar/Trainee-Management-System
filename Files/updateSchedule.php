@@ -13,12 +13,12 @@ $hashvalue=(explode('","',$arr));
 $array1=array_values($hashvalue);
 
 for($i=0,$j=0;$i<sizeof($array1);$i++,$j++){
-    $sql="insert into pschedule(schedule_ID,sn,pdays,time,psession,methods,facilitator) values('".$prid."','".$j."','".$sday."','".$array1[$i]."','".$array1[$i+1]."','".$array1[$i+2]."','".$array1[$i+3]."')";
+    $sql="update pschedule set time='".$array1[$i]."',psession='".$array1[$i+1]."',methods='".$array1[$i+2]."',facilitator='".$array1[$i+3]."' where schedule_ID='".$prid."' and pdays=".$sday." and sn=".$j."";
     
      if(mysqli_query($link,$sql)){
      
-        echo "<head><script>alert('Schedule Uploaded ');</script></head></html>";
-        echo "<meta http-equiv='refresh' content='0; url=addSchedule.php'>";   
+        echo "<head><script>alert('Schedule Updated ');</script></head></html>";
+        echo "<meta http-equiv='refresh' content='0; url=editschedule.php'>";   
      }
    else{
     echo "<html><head><script>alert('ERROR! Update Opertaion Unsucessfull');</script></head></html>";

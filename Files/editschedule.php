@@ -1,4 +1,3 @@
-
 <!doctype html>
 
 <?php
@@ -52,6 +51,7 @@ function myProgram1(){
 </script>
 
 <style>
+
     #table-2, #table-3{
         display:none;
     }    
@@ -72,10 +72,9 @@ function myProgram1(){
                 <option value='3'>REGIONAL WORKSHOP</option>;
 										
                 </select>&ensp;<input type="button" class="a1-btn a1-blue"  name="search" onclick="myProgram1();"  id="search" value="SEARCH"></td>
-				
          </tr>
-    </table>>
-
+    </table>
+    
 <table class="table table-bordered datatable" id="table-1" border=1 align="center" style="margin-top:10px; width:1020px">
 
 		
@@ -112,7 +111,7 @@ function myProgram1(){
 					        
 					        $sno++;
 					        
-					        echo '<td><a href=editprogramdetails.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
+					        echo '<td><a href=editprogramschedule.php?id="'.$row['sn'].'"&schid='.$row['scheduleID'].'&ptype=1"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Schedule" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Schedule" class="a1-btn a1-orange"/></form></td></tr>';
 					        
 							$msgid = 0;
 					    }
@@ -162,7 +161,7 @@ function myProgram1(){
 					        
 					        $sno++;
 					        
-					        echo '<td><a href=editprogramdetails.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
+					        echo '<td><a href=editprogramschedule.php?id="'.$row['sn'].'"&schid='.$row['scheduleID'].'&ptype=2"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Schedule" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Schedule" class="a1-btn a1-orange"/></form></td></tr>';
 					        
 							$msgid = 0;
 					    }
@@ -210,7 +209,7 @@ function myProgram1(){
 					        
 					        $sno++;
 					        
-					        echo '<td><a href=editprogramdetails.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
+					       echo '<td><a href=editprogramschedule.php?id="'.$row['sn'].'"&schid='.$row['scheduleID'].'&ptype=3"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Schedule" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Schedule" class="a1-btn a1-orange"/></form></td></tr>';
 					        
 							$msgid = 0;
 					    }
@@ -220,11 +219,6 @@ function myProgram1(){
 					?>																
 				</tbody>
 		</table>
-
-
-
-
-
 
 
 </body>
