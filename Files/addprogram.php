@@ -18,6 +18,11 @@ session_start();
 <script type="text/javascript" src="./script/script.js"></script>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="index_files/mbcsmbmcp.css" type="text/css" />
+<style>
+#boxxe{
+	width:250px;
+}
+</style>
 </head>
 
 <body>
@@ -34,7 +39,7 @@ session_start();
            <td height="35"><table width="100%" border="0" align="center">
            	 <tr>
            	   <td height="35">PROGRAM TYPE:</td>
-           	   <td height="35"><select name="select" id="select">
+           	   <td height="35"><select id="boxxe" name="select" id="select">
 
                 <option value='1'>ONCAMPUS</option>;
                 <option value='2'>OFFCAMPUS</option>;
@@ -45,21 +50,21 @@ session_start();
 			   
 			   <tr>
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><input name="pname" type="text" size="30" required></td>
+               <td height="35"><input name="pname" id="boxxe" type="text" size="30" required></td>
              </tr>
              <tr id="durationfrom">
                <td height="35">DURATION FROM:</td>
-               <td height="35"><input name="durationfm" type="date" size="30"></td>
+               <td height="35"><input name="durationfm" id="boxxe" type="date" size="30"></td>
              </tr>
              
              <tr id="durationto">
                <td height="35">DURATION TO:</td>
-               <td height="35"><input name="durationto" type="date" size="30"></td>
+               <td height="35"><input name="durationto" id="boxxe" type="date" size="30"></td>
              </tr>
              
              <tr id="venue">
                <td height="35">VENUE:</td>
-               <td height="35"><input name="venue" type="text"></td>
+               <td height="35"><input name="venue" id="boxxe" type="text" size="30"></td>
              </tr>
           
             

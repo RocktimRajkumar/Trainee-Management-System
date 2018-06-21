@@ -12,21 +12,36 @@
 <body>
   <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
-   <form action="saveresearchreport.php" method="POST" enctype="multipart/form-data">
-    <table>
-        <tr>
-            <td><label for="program">Program:</label></td>
-            <td><input name='program' type="text" value='RESEARCH' readonly></td>
+
+
+<div class="a1-container a1-small a1-padding-32" style="margin-top:2px; margin-bottom:2px;">
+        <div class="a1-card-8 a1-light-gray" style="width:400px; margin:0 auto;">
+		<div class="a1-container a1-dark-gray a1-center">
+        	<h6>UPLOAD RESEARCH MATERIAL</h6>
+        </div>
+       <form id="form1" name="form1" method="post" class="a1-container" action="saveresearchreport.php">
+         <table width="100%" border="0" align="center">
+         <tr>
+            <td height="35"><label for="program">Program:</label></td>
+            <td height="35"><input name='program' type="text" value='RESEARCH' readonly></td>
         </tr>
         
-        <tr><td colspan='2'><input type="file" name="file" size="50"/>
+        <tr><td height="35">FILE:</td>
+		<td height="35" colspan='2'><input type="file" name="file" size="50"/>
         </td></tr>
         
         <tr>
-            <td><input type="submit" value="upload"></td>
+		<td>&ensp;</td>
+            <td height="35"><input class="a1-btn a1-blue" type="submit" value="upload"></td>
         </tr>
-    </table>
-</form>
+         </table>
+       </form>
+    </div>
+    </div>   
+
+
+
+  
     
     
 </body>

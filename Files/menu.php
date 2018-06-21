@@ -12,7 +12,7 @@
   <li><div class="buttonbg gradient_button gradient58" style="width: 135px;"><div class="arrow"><div class="icon_3"><a>Trainee</a></div></div></div>
     <ul class="img_16">
     <li class="gradient_menuitem gradient36"><a href="addtrainee.php" class="with_img_16" title=""><img src="index_files/mbico_mbmcp_4.png" alt="" />Add Trainee</a></li>
-    <li class="gradient_menuitem gradient36"><a class="with_img_16" title=""><img src="index_files/mbico_mbmcp_5.png" alt="" />Edit Trainee</a></li>
+    <li class="gradient_menuitem gradient36"><a href="edittrainee.php" class="with_img_16" title=""><img src="index_files/mbico_mbmcp_5.png" alt="" />Edit Trainee</a></li>
     <li class="gradient_menuitem gradient36 last_item"><a class="with_img_16" title=""><img src="index_files/mbico_mbmcp_6.png" alt="" />Delete Trainee</a></li>
     </ul></li>
     

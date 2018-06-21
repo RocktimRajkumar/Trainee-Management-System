@@ -84,120 +84,158 @@ function myProgram1(){
 <body>
  <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
-<div class="a1-container a1-small a1-padding-32" style="margin-top:2px; margin-bottom:2px;">
-        <div class="a1-card-8 a1-light-gray" style="width:500px; margin:0 auto;">
-		<div class="a1-container a1-dark-gray a1-center">
-        	<h6>EDIT</h6>
-        </div>
-       <form id="form1" name="form1" method="post" class="a1-container" action="saveprogram.php">
-         <table width="100%" border="0" align="center">
-         <tr>
-           <td height="35"><table width="100%" border="0" align="center">
-           	 <tr id="protype">
-               <td height="35">PROGRAM TYPE:</td>
-               <td height="35"><select name="protype" id="select" onchange="myProgram1()"><?php
-			   
-			  while($row = mysqli_fetch_assoc($result)) 
-											{
-												echo '<option value='.$row["type_id"].'>'.$row["type"].'</a></option>';
-												
-												
-											}
-											?>
-                </select></td>
-             </tr>
-               
-               <tr id="oncampus">
-               <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="pnameOn" id="select" onchange="myProgramType(this.value,1)">
-               <option value="0">--Please select--</option>
-                      <?php 
-							$sql = ("select * from oncampus");
-                        $result = mysqli_query($link,$sql);
-                        while($row = mysqli_fetch_assoc($result)) 
-											{
-												echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
-												
-												
-											}
-											?></select>
 
-			   </td>
-             </tr>
-             
-             
-             <tr id="offcampus">
-               <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="pnameOff" id="select" onchange="myProgramType(this.value,2)">
-                       <option value="0">--Please select--</option>
-                       <?php 
-							$sql = ("select * from offcampus");
-                            $result = mysqli_query($link,$sql);
-                            while($row = mysqli_fetch_assoc($result)) 
-											{
-												echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
-												
-												
-											}
-											?></select>
 
-			   </td>
-             </tr>
-             
-             
-             <tr id="research">
-               <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="pnameRe" id="select" onchange="myProgramType(this.value,3)">
-               <option value="0">--Please select--</option>
-                    <?php 
-							$sql = ("select * from researchstudy");
-                            $result = mysqli_query($link,$sql);
-                            while($row = mysqli_fetch_assoc($result)) 
-											{
-												echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
-												
-												
-											}
-											?></select>
+<table class="table table-bordered datatable" id="table-1" border=1 align="center" style="margin-top:10px; width:1020px">
 
-			   </td>
-             </tr>
-             
-             
-             <tr id="pgdaem">
-               <td height="35">PROGRAM NAME:</td>
-               <td height="35"><select name="pnamePg" id="select" onchange="myProgramType(this.value,4)">
-               <option value="0">--Please select--</option>
-                   <?php 
-							$sql = ("select * from pgdaem");
-                            $result = mysqli_query($link,$sql);
-                            while($row = mysqli_fetch_assoc($result)) 
-											{
-												echo '<option value='.$row["sn"].'>'.$row["title"].'</option>';
-												
-												
-											}
-											?></select>
+			<th>
+				<tr>
+					<th>S.No</th>
+					<th>PROGRAM TYPE</th>
+					<th>PROGRAM NAME:</th>
+					<th>DURATION FROM:</th>
+					<th>DURATION TO:</th>
+					<th>VENUE:</th>
+					<th>Action</th>
+				</tr>
+			</th>		
+				<tbody>
+					<?php
 
-			   </td>
-             </tr>
-               
-             <table id="programtype" width="100%" border="0" align="center">
 
-             
-             </table>
-            
-            
-             
-               <td height="35">&nbsp;</td>
-               <td height="35"><input class="a1-btn a1-blue" type="submit" name="submit" id="submit" value="Register" >
-                 <input class="a1-btn a1-blue" type="reset" name="reset" id="reset" value="Reset"></td>
-             </tr>
-           </table></td>
-         </tr>
-         </table>
-       </form>
-    </div>
-    </div>   
+					$query  = "select * from offcampus";
+					//echo $query;
+					$result = mysqli_query($link, $query);
+					$sno    = 1;
+
+					if (mysqli_affected_rows($link) != 0) {
+					    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+					        $msgid = $row['sn'];
+					        
+					        
+					        echo "<tr><td>" . $sno . "</td>";
+					        echo "<td> OFFCAMPUS </td>";
+					        echo "<td>" . $row['title'] . "</td>";
+							echo "<td>" . $row['durationfrom'] . "</td>";
+							echo "<td>" . $row['durationto'] . "</td>";
+							echo "<td>" . $row['venue'] . "</td>";
+					        
+					        $sno++;
+					        
+					        echo '<td><a href=editprogramdetails.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
+					        
+							$msgid = 0;
+					    }
+					    
+					}
+
+					?>																
+				</tbody>
+		</table>
+		
+		
+		
+		
+		<table class="table table-bordered datatable" id="table-1" border=1 align="center" style="margin-top:10px; width:1020px">
+
+		
+				<tr>
+					<th>S.No</th>
+					<th>PROGRAM TYPE</th>
+					<th>PROGRAM NAME:</th>
+					<th>DURATION FROM:</th>
+					<th>DURATION TO:</th>
+					<th>VENUE:</th>
+					<th>Action</th>
+				</tr>
+		
+				<tbody>
+					<?php
+
+
+					$query  = "select * from oncampus";
+					//echo $query;
+					$result = mysqli_query($link, $query);
+					$sno    = 1;
+
+					if (mysqli_affected_rows($link) != 0) {
+					    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+					        $msgid = $row['sn'];
+					        
+					        
+					        echo "<tr><td>" . $sno . "</td>";
+					        echo "<td> ONCAMPUS </td>";
+					        echo "<td>" . $row['title'] . "</td>";
+							echo "<td>" . $row['durationfrom'] . "</td>";
+							echo "<td>" . $row['durationto'] . "</td>";
+							echo "<td>" . $row['venue'] . "</td>";
+					        
+					        $sno++;
+					        
+					        echo '<td><a href=editprogramdetails.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
+					        
+							$msgid = 0;
+					    }
+					    
+					}
+
+					?>																
+				</tbody>
+		</table>
+		
+		
+		<table class="table table-bordered datatable" id="table-1" border=1 align="center" style="margin-top:10px; width:1020px">
+
+		
+				<tr>
+					<th>S.No</th>
+					<th>PROGRAM TYPE</th>
+					<th>PROGRAM NAME:</th>
+					<th>DURATION FROM:</th>
+					<th>DURATION TO:</th>
+					<th>VENUE:</th>
+					<th>Action</th>
+				</tr>
+				
+				<tbody>
+					<?php
+
+
+					$query  = "select * from regional";
+					//echo $query;
+					$result = mysqli_query($link, $query);
+					$sno    = 1;
+
+					if (mysqli_affected_rows($link) != 0) {
+					    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+					        $msgid = $row['sn'];
+					        
+					        
+					        echo "<tr><td>" . $sno . "</td>";
+					        echo "<td> REGIONAL WORKSHOP </td>";
+					        echo "<td>" . $row['title'] . "</td>";
+							echo "<td>" . $row['durationfrom'] . "</td>";
+							echo "<td>" . $row['durationto'] . "</td>";
+							echo "<td>" . $row['venue'] . "</td>";
+					        
+					        $sno++;
+					        
+					        echo '<td><a href=editprogramdetails.php?id="'.$row['sn'].'"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Program" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Program" class="a1-btn a1-orange"/></form></td></tr>';
+					        
+							$msgid = 0;
+					    }
+					    
+					}
+
+					?>																
+				</tbody>
+		</table>
+
+
+
+
+
+
+
 </body>
 </html>
