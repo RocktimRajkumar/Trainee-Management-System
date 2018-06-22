@@ -111,7 +111,7 @@ function myProgram1(){
 					        
 					        $sno++;
 					        
-					        echo '<td><a href=editprogramschedule.php?id="'.$row['sn'].'"&schid='.$row['scheduleID'].'&ptype=1"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Schedule" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Schedule" class="a1-btn a1-orange"/></form></td></tr>';
+					        echo '<td><a href=editprogramschedule.php?id="'.$row['sn'].'"&schid='.$row['scheduleID'].'&ptype=1"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Schedule" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Schedule All" class="a1-btn a1-orange"/></form></td></tr>';
 					        
 							$msgid = 0;
 					    }
@@ -161,7 +161,7 @@ function myProgram1(){
 					        
 					        $sno++;
 					        
-					        echo '<td><a href=editprogramschedule.php?id="'.$row['sn'].'"&schid='.$row['scheduleID'].'&ptype=2"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Schedule" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Schedule" class="a1-btn a1-orange"/></form></td></tr>';
+					        echo '<td><a href=editprogramschedule.php?id="'.$row['sn'].'"&schid='.$row['scheduleID'].'&ptype=2"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Schedule" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Schedule All" class="a1-btn a1-orange"/></form></td></tr>';
 					        
 							$msgid = 0;
 					    }
@@ -209,7 +209,7 @@ function myProgram1(){
 					        
 					        $sno++;
 					        
-					       echo '<td><a href=editprogramschedule.php?id="'.$row['sn'].'"&schid='.$row['scheduleID'].'&ptype=3"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Schedule" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Schedule" class="a1-btn a1-orange"/></form></td></tr>';
+					       echo '<td><a href=editprogramschedule.php?id="'.$row['sn'].'"&schid='.$row['scheduleID'].'&ptype=3"><input type="button" class="a1-btn a1-blue" id="boxxe" style="width:100%" value="Edit Schedule" ></a><form action="deleleteprogram.php" method="post" onSubmit="return ConfirmDelete();"><input type="hidden" name="name" value="' . $msgid .'"/><input type="submit" id="button1" value="Delete Schedule All" class="a1-btn a1-orange"/></form></td></tr>';
 					        
 							$msgid = 0;
 					    }
