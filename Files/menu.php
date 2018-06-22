@@ -41,7 +41,7 @@
     <li><a class="with_img_16" title=""><img src="index/mbico_mbmcp_13.png" alt="" />State Wise</a></li>
     <li class="last_item"><a class="with_img_16 with_arrow" title=""><img src="index/mbico_mbmcp_14.png" alt="" />View Uploaded</a>
       <ul class="img_16">
-      <li><a class="with_img_16" title=""><img src="index/mbico_mbmcp_15.png" alt="" />View PGDAEM Result</a></li>
+      <li><a href="viewresult.php" class="with_img_16" title=""><img src="index/mbico_mbmcp_15.png" alt="" />View PGDAEM Result</a></li>
       <li><a class="with_img_16" title=""><img src="index/mbico_mbmcp_16.png" alt="" />View PGDAEM Material</a></li>
       <li class="last_item"><a class="with_img_16" title=""><img src="index/mbico_mbmcp_17.png" alt="" />View Research Report</a></li>
       </ul></li>
