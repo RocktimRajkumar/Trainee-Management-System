@@ -74,7 +74,7 @@ function myProgram1(){
                 </select>&ensp;<input type="button" class="a1-btn a1-blue"  name="search" onclick="myProgram1();"  id="search" value="SEARCH"></td>
 				
          </tr>
-    </table>>
+    </table>
 
 <table class="" id="table-1" border=1 align="center" style="margin-top:10px; width:1020px">
 
@@ -126,7 +126,7 @@ function myProgram1(){
 		
 		
 		
-		<table class="a1-padding-12" id="table-2" border=1 align="center" style="margin-top:10px; width:1020px; ">
+		<table class="" id="table-2" border=1 align="center" style="margin-top:10px; width:1020px; ">
 
 		
 				<tr>
