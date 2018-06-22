@@ -42,8 +42,8 @@
     <li class="last_item"><a class="with_img_16 with_arrow" title=""><img src="index/mbico_mbmcp_14.png" alt="" />View Uploaded</a>
       <ul class="img_16">
       <li><a href="viewresult.php" class="with_img_16" title=""><img src="index/mbico_mbmcp_15.png" alt="" />View PGDAEM Result</a></li>
-      <li><a class="with_img_16" title=""><img src="index/mbico_mbmcp_16.png" alt="" />View PGDAEM Material</a></li>
-      <li class="last_item"><a class="with_img_16" title=""><img src="index/mbico_mbmcp_17.png" alt="" />View Research Report</a></li>
+      <li><a href="viewstudymaterial.php" class="with_img_16" title=""><img src="index/mbico_mbmcp_16.png" alt="" />View PGDAEM Material</a></li>
+      <li class="last_item"><a href="viewresearchreport.php" class="with_img_16" title=""><img src="index/mbico_mbmcp_17.png" alt="" />View Research Report</a></li>
       </ul></li>
     </ul></li>
   <li><div class="icon_8 buttonbg" style="width: 103px;"><a href="logout.php" class="button_8">Logout</a></div></li>
