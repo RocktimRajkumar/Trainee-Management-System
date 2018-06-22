@@ -19,8 +19,6 @@ else if($t==3){
     $sql="SELECT * FROM regional where scheduleID=".$scheID;
 }
 
-
-echo $sn." hello ".$scheID."hi ".$t;
 $result=mysqli_query($link,$sql);
 
 ?>
@@ -114,7 +112,7 @@ function myProgram1(){
     </form>
     
     <script>
-         // EXTRACT AND SUBMIT TABLE DATA.
+         // Update Schedule
     function sumbit() {
         var myTab = document.getElementById('viewSchedule');
         var values = new Array();
@@ -152,6 +150,29 @@ function myProgram1(){
         xmlhttp.send();
     }
     
+        
+     //Delete Schedule
+    function delsche() {
+         if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("status").innerHTML=this.responseText;
+                
+            }
+        };
+        var x=document.getElementById("select");
+        var i=x.selectedIndex;
+        var dayvalue=x.options[i].value;
+        
+        var provalue=document.getElementById("sched").value;
+
+        xmlhttp.open("GET","deleteSchedule.php?day="+dayvalue+"&prname="+provalue,true);
+        xmlhttp.send();
+    }
+        
 </script>
 
 

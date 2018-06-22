@@ -231,7 +231,7 @@ $result = mysqli_query($link,$sql);
                 // CREATE AND ADD TEXTBOX IN EACH CELL.
                 var ele = document.createElement('input');
                 ele.setAttribute('type', 'text');
-                ele.setAttribute('value', '');
+                ele.setAttribute('value', ' ');
                 td.appendChild(ele);
             }
         }
