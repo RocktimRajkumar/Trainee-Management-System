@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 22/06/2018 02:36:44
+ Date: 22/06/2018 13:34:51
 */
 
 SET NAMES utf8mb4;
@@ -223,9 +223,21 @@ INSERT INTO `pschedule` VALUES ('180604030612', 1, '9.30-10.00', 'Preparation of
 INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.00-10.30', 'Tea Break', 'Tea Break', 'Tea Break', 1);
 INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.30-10.45', 'Back at Work Plan', 'Individual exercise Presentation', 'Dr.S.Borua,EEI,Jorhat', 2);
 INSERT INTO `pschedule` VALUES ('180604030612', 1, '10.45-11.30', 'Consolidation of Lessons Learnt', 'Group Task presentation', 'Ms.P.Sharma, EEi,Jorhat', 3);
-INSERT INTO `pschedule` VALUES ('180619220657', 1, '09.30-11.15', 'Management Game -II', 'Interactive session Presentation', 'Dr. B.L. Khuhly, SAMETI, Mizoram', 0);
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '9.30-11.15', 'Management Game -II', 'Interactive session presentation', 'Dr.B.L. Khuhly, SAMETI, Mizoram', 0);
 INSERT INTO `pschedule` VALUES ('180619220657', 1, '11.15-11.30', 'Tea Break', 'Tea Break', 'Tea Break', 1);
-INSERT INTO `pschedule` VALUES ('180619220657', 1, '11.30-01.00', 'Management Game-III', 'Group work  presentation input', 'Dr.A.K.Bhattacharyya', 2);
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '11.30-01.00', 'Managment Game-III', 'Group Work presentation input', 'Dr.A.K.Bhattacharyya EEi,Jorhat', 2);
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '01.00-2.00', 'Lunch Break', 'Lunch Break', 'Lunch Break', 3);
+INSERT INTO `pschedule` VALUES ('180619220657', 1, '2.000-4.00', 'Managment Game-IV', 'Group work presentation input', 'Dr.B.L.Khuhly, SAMETI,Mizoram', 4);
+INSERT INTO `pschedule` VALUES ('180604000648', 1, ' 09.30-11.15', 'Management Game -II', 'Interactive session presentation', 'Dr.B.L.Khuhly, SAMETI, Mizoram', 0);
+INSERT INTO `pschedule` VALUES ('180604000648', 1, ' 11.15-11.30', 'Tea Break', 'Tea Break', 'Tea Break', 1);
+INSERT INTO `pschedule` VALUES ('180604000648', 1, ' 11.30-01.00', 'Management Game -III', 'Group work presentation   input', 'Dr. A.K. Bhattacharyya, EEI,Jorhat', 2);
+INSERT INTO `pschedule` VALUES ('180604000648', 1, ' 01.00-02.00', 'Lunch Break', 'Lunch Break', 'Lunch Break', 3);
+INSERT INTO `pschedule` VALUES ('180604000648', 1, ' 02.000-04.00', 'Management Game -IV', 'Group work   presentation   input', 'Dr.B.L.Khuhly, SAMETI, Mizoram', 4);
+INSERT INTO `pschedule` VALUES ('180604000648', 1, ' 04.00-04.15', 'Day\'s Review', '-', 'Mr.H.Das, EEI, Jorhat', 5);
+INSERT INTO `pschedule` VALUES ('180604000648', 2, ' 09.30-10.15', 'Management Gme -VII', 'Group work presentation input', 'Dr.S.Borua, EEI,jorhat', 0);
+INSERT INTO `pschedule` VALUES ('180604000648', 2, ' 10.30-01.00', 'Visit Cinnamara Tea Estate to interact with staff and factory visit', 'Field Visit', 'Ms.P.Sharma,EEi,Jorhat', 1);
+INSERT INTO `pschedule` VALUES ('180604000648', 2, ' 01.00-02.00', 'Lunch Break', 'Lunch Break', 'Lunch Break', 2);
+INSERT INTO `pschedule` VALUES ('180604000648', 2, ' 02.00-04.00', 'Management Game -VII', 'Group work Presentation input', 'Mr.H.Das,EEI,Jorhat', 3);
 
 -- ----------------------------
 -- Table structure for regional
