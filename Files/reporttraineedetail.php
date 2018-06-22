@@ -14,10 +14,16 @@ else if($sn==2)
 	$tablename="offcampus";
 else if($sn==3)
 	$tablename="regional";
+
+$sql="select * from $tablename where sn=$ptype";
+$res=mysqli_query($link,$sql);
+
+
 					
 		if (mysqli_affected_rows($link) != 0){
-
-
+ $row1=mysqli_fetch_array($res, MYSQLI_ASSOC);
+ 
+ echo '<tr><td colspan=10><h4 align="center" >PROGRAM WISE REPORT OF '. $tablename. ' TRAINEES enrolled in '.$row1['title'].'</h4></td></tr>';
 echo '<tr>
 					<th>S No:</th>
 					<th>Trainee ID:</th>

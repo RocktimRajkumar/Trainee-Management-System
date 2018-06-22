@@ -65,15 +65,14 @@ session_start();
 <table id="programName" align=center>
 </table>
 
-<input align="center" style="margin-left:auto; margin-right:auto" type="button" class="a1-btn a1-blue" value="PRINT" id="print" onclick="myFunction()"/>
-<div id=printreport>
+<input type="button" value="PRINT" id="print"/>
 
 <table id="programtype" border=1 class=""  align="center" style="margin-top:10px; width:1000px">
 
 
 		
 				
-		</table></div>
+		</table>
 		
 </body>
 </html>
@@ -132,19 +131,4 @@ session_start();
     }
     }
     
-	
-	function myFunction()
-	{
-		var prt=document.getElementById("printreport");
-		var WinPrint=window.open('','','left=0,top=0,width=800,height=900,tollbar=0,scrollbars=0,status=0');
-		WinPrint.document.write(prt.innerHTML);
-		WinPrint.document.close();
-		WinPrint.focus();
-		WinPrint.print();
-		WinPrint.close();
-		setPageHeight("297mm");
-		setPageWidth("210mm");
-		setHtmlZoom(100);
-		//window.location.replace("index.php?query=");
-	}
 </script>

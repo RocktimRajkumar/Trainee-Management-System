@@ -17,7 +17,7 @@
 <div class="a1-container a1-small a1-padding-32" style="margin-top:2px; margin-bottom:2px;">
         <div class="a1-card-8 a1-light-gray" style="width:400px; margin:0 auto;">
 		<div class="a1-container a1-dark-gray a1-center">
-        	<h6>UPLOAD RESEARCH MATERIAL</h6>
+        	<h6>UPLOAD RESEARCH REPORT</h6>
         </div>
        <form id="form1" name="form1" method="post" class="a1-container" action="saveresearchreport.php">
          <table width="100%" border="0" align="center">

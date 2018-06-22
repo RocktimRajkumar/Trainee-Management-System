@@ -34,7 +34,7 @@
      
       <li><div class="buttonbg gradient_button gradient58" style="width: 130px;"><div class="arrow"><div  style="padding-right:20px;" class="icon_5"><a class="button_5">Report</a></div></div></div>
   <ul class="img_16">
-    <li class="gradient_menuitem gradient36"><a href="pgdaem.php" class="with_img_16" title=""><img src="index_files/mbico_mbmcp_4.png" alt="" />Year Wise</a></li>
+    <li class="gradient_menuitem gradient36"><a href="yearwise.php" class="with_img_16" title=""><img src="index_files/mbico_mbmcp_4.png" alt="" />Year Wise</a></li>
     <li class="gradient_menuitem gradient36"><a href="reportprogramwise.php" class="with_img_16" title=""><img src="index_files/mbico_mbmcp_5.png" alt="" />Program Wise</a></li>
     <li class="gradient_menuitem gradient36 last_item"><a href="uploadpgdaem.php" class="with_img_16" title=""><img src="index_files/mbico_mbmcp_6.png" alt="" />Trainee Wise</a></li>
     <li class="gradient_menuitem gradient36 last_item"><a href="uploadpgdaem.php" class="with_img_16" title=""><img src="index_files/mbico_mbmcp_6.png" alt="" />State Wise</a></li>
