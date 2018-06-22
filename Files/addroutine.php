@@ -14,7 +14,6 @@ $arr=str_replace("'","\'",$arr);
 $hashvalue=(explode('","',$arr));
 $array1=array_values($hashvalue);
 
-
 for($i=0,$j=0;$i<sizeof($array1);$i++,$j++){
     $sql="insert into pschedule(schedule_ID,sn,pdays,time,psession,methods,facilitator) values('".$prid."',".$j.",".$sday.",'".$array1[$i]."','".$array1[$i+1]."','".$array1[$i+2]."','".$array1[$i+3]."')";
      if(mysqli_query($link,$sql)){

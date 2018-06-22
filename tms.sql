@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 22/06/2018 13:34:51
+ Date: 22/06/2018 18:33:28
 */
 
 SET NAMES utf8mb4;
@@ -26,6 +26,7 @@ CREATE TABLE `address`  (
   `city` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `state` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `streetname` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `pin` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   INDEX `tid`(`tid`) USING BTREE,
   CONSTRAINT `trainee_id` FOREIGN KEY (`tid`) REFERENCES `trainee` (`tid`) ON DELETE CASCADE ON UPDATE NO ACTION
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
@@ -33,8 +34,9 @@ CREATE TABLE `address`  (
 -- ----------------------------
 -- Records of address
 -- ----------------------------
-INSERT INTO `address` VALUES ('1528051374', 'Jorhat', 'Assam', 'JPR');
-INSERT INTO `address` VALUES ('1529429536', 'Mumbai', 'Maharastra', 'Andhari');
+INSERT INTO `address` VALUES ('1528051374', 'Jorhat', 'Assam', 'JPR', '785001');
+INSERT INTO `address` VALUES ('1529429536', 'Mumbai', 'Maharastra', 'Andhari', '785002');
+INSERT INTO `address` VALUES ('1529661540', 'Saginaw', 'MI', '3527  Hart Ridge Road', '785006');
 
 -- ----------------------------
 -- Table structure for admin
@@ -303,5 +305,6 @@ CREATE TABLE `trainee`  (
 -- ----------------------------
 INSERT INTO `trainee` VALUES ('1528051374', 'Govinda Poddar', 'Student', '8795462120', '2018-06-06', 1, 8, NULL, NULL, NULL);
 INSERT INTO `trainee` VALUES ('1529429536', 'Telusko', 'Teacher', '7896543210', '2018-06-19', 3, 9, 'Graduate', 'telusko@gmail.com', 'Regional');
+INSERT INTO `trainee` VALUES ('1529661540', 'Lori J Donoho', 'Student', '9293238998', '2018-06-23', 1, 9, 'H.S', 'lori@gmail.com', 'abc');
 
 SET FOREIGN_KEY_CHECKS = 1;

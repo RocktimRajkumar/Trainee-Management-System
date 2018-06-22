@@ -66,9 +66,14 @@ $result = mysqli_query($link,$sql);
              </tr>
 			 <tr>
                <td height="35">DATE OF REPORTING:</td>
-               <td height="35"><input name="designation" type="text" id="three" readonly value="<?php echo $row['DOR'] ?>" size="45"></td>
+               <td height="35"><input name="dor" type="text" id="three" readonly value="<?php echo $row['DOR'] ?>" size="45"></td>
              </tr>
              
+			 <tr>
+               <td height="35">ADDRESS:</td>
+               <td height="35"><input name="add" value="<?php echo $row['streetname'] ?>" type="text" size="45"></td>
+             </tr>
+			 
              <tr>
                <td height="35">CITY</td>
                <td height="35"><input name="city" value="<?php echo $row['city'] ?>" type="text" size="45"></td>
@@ -107,12 +112,12 @@ $result = mysqli_query($link,$sql);
 
 			   <tr id="protype">
                <td height="35">PROGRAM TYPE:</td>
-               <td height="35"><input name="discipline" value="<?php echo $table ?>" type="text" size="45"></td>
+               <td height="35"><input name="ptype" readonly value="<?php echo $table ?>" type="text" size="45"></td>
              </tr>
 			 
 			 <tr id="ptype">
                <td height="35">PROGRAM NAME:</td>
-               <td height="35"><input name="discipline" value="<?php echo $row['title'] ?>" type="text" size="45">
+               <td height="35"><input name="pname" readonly value="<?php echo $row['title'] ?>" type="text" size="45">
 
 			   </td>
              </tr>

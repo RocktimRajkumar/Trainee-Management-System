@@ -54,7 +54,7 @@ echo '<tr>
 							echo "<td>" . $row['email'] . "</td>";
 							echo "<td>" . $row['discipline'] . "</td>";
 					        $sno++;
-					         echo "<td><form action='edittrainee.php' method='post'><input type='hidden' name='sn' value='" . $ptype . "'/><input type='hidden' name='tb' value='" . $tablename . "'/><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' class='a1-btn a1-blue' id='boxxe' value='Edit Trainee ' class='btn btn-info'/></form><form action='deltrainee.php' method='post' onsubmit='return ConfirmDelete()'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Delete Trainee' width='20px' id='boxxe' class='a1-btn a1-orange'/></form></td></tr>";
+					         echo "<td><form action='edittrainee.php' method='post'><input type='hidden' name='sn' value='" . $ptype . "'/><input type='hidden' name='tb' value='" . $tablename . "'/><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' class='a1-btn a1-blue' id='boxxe' value='Edit Trainee ' class='btn btn-info'/></form><form action='deltrainee.php' method='post' onsubmit='return ConfirmDelete()'><input type='hidden' name='sn' value='" . $ptype . "'/><input type='hidden' name='tb' value='" . $tablename . "'/><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Delete Trainee' width='20px' id='boxxe' class='a1-btn a1-orange'/></form></td></tr>";
 
 					        
 							$msgid = 0;
