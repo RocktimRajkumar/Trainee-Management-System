@@ -20,9 +20,9 @@ while($row=mysqli_fetch_assoc($result)){
   echo "<td><input type='text' value='".$row['facilitator']."'></td></tr>";
 }
 
-echo "<tr border='0'><td colspan='4' align='center'><input type='button' value='Update' onclick='sumbit()'>";
-echo "<input type='button' value='Delete' onclick='delsche()'>";
-echo "<input type='reset' value='Cancel'></td></tr>";
+echo "<tr border='0'><td colspan='4' align='center'><input type='button' class='a1-btn a1-blue' value='Update' onclick='sumbit()'>&ensp;";
+echo "<input type='button' class=a1-btn a1-blue' value='Delete' onclick='delsche()'>&ensp;";
+echo "<input type='reset' class='a1-btn a1-blue' value='Cancel'></td></tr>";
 }
 else
     echo "<h3>No Schedule Found</h3>";

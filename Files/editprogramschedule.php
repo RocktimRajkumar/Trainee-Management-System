@@ -19,6 +19,8 @@ else if($t==3){
     $sql="SELECT * FROM regional where scheduleID=".$scheID;
 }
 
+
+
 $result=mysqli_query($link,$sql);
 
 ?>
@@ -105,7 +107,7 @@ function myProgram1(){
     </table>
     
     <form action="">
-    <table id="viewSchedule" border="1" cellspacing="0">
+    <table id="viewSchedule" border="1" cellspacing="0" align=center>
         
         
     </table>

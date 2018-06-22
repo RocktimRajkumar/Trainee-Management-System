@@ -29,7 +29,7 @@
 
   if(mysqli_query($link,$query)==1){
        
-      $query1="insert into address(tid,city,state,streetname) values('".$tid."','".$city."','".$state."','".$street."')";
+      $query1="insert into address(tid,pin,city,state,streetname) values('".$tid."','".$pin."','".$city."','".$state."','".$street."')";
       if(mysqli_query($link,$query1)==1){
           echo "<head><script>alert('Trainee Successfully Added');</script></head></html>";
                echo "<meta http-equiv='refresh' content='0; url=addtrainee.php'>";
