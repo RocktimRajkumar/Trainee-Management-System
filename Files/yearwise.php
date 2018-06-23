@@ -2,9 +2,7 @@
 
 <?php
  include "connect.php";
- $sql = ("select * from programme");
 
-$result = mysqli_query($link,$sql);
 session_start();
  if(!isset($_SESSION["adminlogin"]))
 {
@@ -25,9 +23,6 @@ session_start();
 #boxxe{
 	width:180px;
 }
-#programtype,#print{
-	display:none;
-}
 </style>
 </head>
 <?php 
@@ -36,60 +31,39 @@ session_start();
 							  
 ?>
 
-<body>
+<body onload="loadtrainee('2018-2019');">
  <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 
-<table align=center>
+<label for="select">Year :</label>
+<select id="select" onchange="loadtrainee(this.value)">
+    <option value="2014-15">2014-15</option>
+    <option value="2015-16">2015-16</option>
+    <option value="2016-17">2016-17</option>
+    <option value="2017-18">2017-18</option>
+    <option value="2018-19" selected>2018-19</option>
+    
+</select>
 
-<tr id="protype">
-               <td height="35">PROGRAM TYPE:</td>
-               <td height="35"><select name="protype" id="select" onchange="myProgramName(this.value)"><?php
-			   echo '<option value="0">--Please Select--</option>';
-			  while($row = mysqli_fetch_assoc($result)) 
-											{
-												echo '<option value='.$row["type_id"].'>'.$row["type"].'</a></option>';
-												
-												
-											}
-											?>
-                </select></td>
-             </tr>
-			 
-			
-             
-             
-</table>
+<br>
+<input align="center" style="margin-left:auto; margin-right:auto" type="button" class="a1-btn a1-blue" value="PRINT" id="print" onclick="myFunction()"/>
+<div id=printreport>
 
-
-<table id="programName" align=center>
-</table>
-
-<input type="button" value="PRINT" id="print"/>
-
-<table id="programtype" border=1 class=""  align="center" style="margin-top:10px; width:1000px">
+<table id="traineeName" border=1 class=""  align="center" style="margin-top:10px; width:1000px">
 
 
 		
 				
-		</table>
+		</table></div>
 		
 </body>
 </html>
 <script> 
-
-	 function myProgramName(str){
-    if (str == "0") {
-        document.getElementById("programName").innerHTML = "";
-        document.getElementById("programtype").innerHTML = "";
-		var trainee=document.getElementById('programtype');
-		trainee.style.display="none";
-        document.getElementById("print").display="none";
-        return;
-    } else { 
-	var trainee=document.getElementById('programtype');
-		trainee.style.display="none";
-        document.getElementById("programtype").innerHTML = "";
+    
+    function loadtrainee(str){
+        var print=document.getElementById("print");
+        var trainee=document.getElementById("traineeName");
+        
     
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -97,38 +71,29 @@ session_start();
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("programName").innerHTML=this.responseText;
+                document.getElementById("traineeName").innerHTML=this.responseText;
                 
             }
         };
-        xmlhttp.open("GET","myprogramName.php?q="+str,true);
+        xmlhttp.open("GET","yearwisetrainee.php?q="+str,true);
         xmlhttp.send();
     }
-    }
+
        
-
-  
-    function myProgramType(str,type){
-		var trainee=document.getElementById('programtype');
-		trainee.style.display="table";
-        document.getElementById('print').style.display="block";
-    if (str == "0") {
-        document.getElementById("programtype").innerHTML = "";
-        return;
-    } else { 
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("programtype").innerHTML=this.responseText;
-                
-            }
-        };
-        xmlhttp.open("GET","reporttraineedetail.php?q="+str+"&t="+type,true);
-        xmlhttp.send();
-    }
-    }
     
+	
+	function myFunction()
+	{
+		var prt=document.getElementById("printreport");
+		var WinPrint=window.open('','','left=0,top=0,width=800,height=900,tollbar=0,scrollbars=0,status=0');
+		WinPrint.document.write(prt.innerHTML);
+		WinPrint.document.close();
+		WinPrint.focus();
+		WinPrint.print();
+		WinPrint.close();
+		setPageHeight("297mm");
+		setPageWidth("210mm");
+		setHtmlZoom(100);
+		//window.location.replace("index.php?query=");
+	}
 </script>

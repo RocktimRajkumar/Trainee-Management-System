@@ -36,7 +36,7 @@
                 <option value="2015-16">2015-16</option>
                 <option value="2016-17">2016-17</option>
                 <option value="2017-18">2017-18</option>
-                <option value="2018-19">2018-19</option>
+                <option value="2018-19" selected>2018-19</option>
             </select></td>
              </tr>
              <tr>
