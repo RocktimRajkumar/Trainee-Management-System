@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 24/06/2018 02:38:26
+ Date: 24/06/2018 02:46:10
 */
 
 SET NAMES utf8mb4;
@@ -126,7 +126,6 @@ CREATE TABLE `pgdaem`  (
 -- ----------------------------
 -- Records of pgdaem
 -- ----------------------------
-INSERT INTO `pgdaem` VALUES (1, 'abc', 'def', 'hij', 'klm', 0x797979, 'nop', 'qrst', '1234', 'uvwx@gmail.com', 'degee', 'bbbbbb', 'zzzzz');
 INSERT INTO `pgdaem` VALUES (2, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', '1234', 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
 INSERT INTO `pgdaem` VALUES (3, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', '1234', 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
 INSERT INTO `pgdaem` VALUES (4, '2014-15', 'assam', '1st', 'Biraj', 0x31353239343137323330, 'stuent', 'titabor', '8976332', 'biraj@gmail.com', '12th', 'pgd', '2');
