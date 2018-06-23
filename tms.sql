@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 22/06/2018 18:33:28
+ Date: 24/06/2018 02:38:26
 */
 
 SET NAMES utf8mb4;
@@ -115,21 +115,23 @@ CREATE TABLE `pgdaem`  (
   `canID` varbinary(40) NULL DEFAULT NULL,
   `designation` varchar(80) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `address` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `phoneno` int(11) NULL DEFAULT NULL,
+  `phoneno` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `email` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `qualification` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `discipline` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `lenofservice` varchar(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`pgdaemid`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pgdaem
 -- ----------------------------
-INSERT INTO `pgdaem` VALUES (1, 'abc', 'def', 'hij', 'klm', 0x797979, 'nop', 'qrst', 1234, 'uvwx@gmail.com', 'degee', 'bbbbbb', 'zzzzz');
-INSERT INTO `pgdaem` VALUES (2, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', 1234, 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
-INSERT INTO `pgdaem` VALUES (3, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', 1234, 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
-INSERT INTO `pgdaem` VALUES (4, '2014-15', 'assam', '1st', 'Biraj', 0x31353239343137323330, 'stuent', 'titabor', 8976332, 'biraj@gmail.com', '12th', 'pgd', '2');
+INSERT INTO `pgdaem` VALUES (1, 'abc', 'def', 'hij', 'klm', 0x797979, 'nop', 'qrst', '1234', 'uvwx@gmail.com', 'degee', 'bbbbbb', 'zzzzz');
+INSERT INTO `pgdaem` VALUES (2, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', '1234', 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
+INSERT INTO `pgdaem` VALUES (3, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', '1234', 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
+INSERT INTO `pgdaem` VALUES (4, '2014-15', 'assam', '1st', 'Biraj', 0x31353239343137323330, 'stuent', 'titabor', '8976332', 'biraj@gmail.com', '12th', 'pgd', '2');
+INSERT INTO `pgdaem` VALUES (5, '2018-19', 'nagaland', '2nd', 'Dean K Cutler', 0x31353239373837393334, 'Professor', '4318  Harley Brook Lane', '81453517', 'dean@gmail.com', 'HS Passed', 'Soft Skills', '4');
+INSERT INTO `pgdaem` VALUES (6, '2018-19', 'assam', '1st', 'Timothy A Green', 0x31353239373837393732, 'Student', '827  Lost Creek Road', '8011864512', 'timonthy@gmail.com', 'Under graduate', 'Management Skills', '2');
 
 -- ----------------------------
 -- Table structure for pgdaemmaterial

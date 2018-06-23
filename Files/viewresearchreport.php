@@ -1,4 +1,11 @@
 <?php
+session_start();
+ if(!isset($_SESSION["adminlogin"]))
+{
+	header("location:index.php");
+}
+?>
+<?php
 
     if(isset($_GET['download'])){
 
