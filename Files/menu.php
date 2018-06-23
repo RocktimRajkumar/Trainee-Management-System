@@ -8,8 +8,8 @@
 <body>
 
 
-<div id="mbmcpebul_wrapper" style="max-width: 1000px;">
-  <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu">
+<div id="mbmcpebul_wrapper" style="max-width: 100%;">
+  <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu" style="display:table;margin-left:auto;margin-right:auto;">
   <li><div class="icon_1 buttonbg" style="width: 93px;"><a href="admin.php" class="button_1">Home</a></div></li>
   <li><div class="arrow buttonbg" style="width: 129px;"><div class="icon_2"><a>Program</a></div></div>
     <ul class="img_16">
