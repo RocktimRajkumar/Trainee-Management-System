@@ -3,7 +3,7 @@
 <head>
 <title>Untitled</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="index/mbcsmbmcp.css" type="text/css" />
+<link rel="stylesheet" href="index_files/mbcsmbmcp.css" type="text/css" />
 </head>
 <body>
 

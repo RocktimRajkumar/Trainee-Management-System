@@ -5,12 +5,12 @@
 {
 	width:100%;
 	height:200px;
+    margin-bottom:10px;
 	
 }
 .welcome
 {
 	width:100%;
-	height:500px;
 	padding:30px;
 }
 
@@ -19,6 +19,17 @@
     margin-left: auto;
     margin-right: auto;
     
+}
+
+#about{
+    padding-left:10%;
+    padding-right:10%;
+    text-align:justify;
+}
+
+#about p{
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #crschedule{
