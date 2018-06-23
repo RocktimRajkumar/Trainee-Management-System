@@ -37,7 +37,7 @@
     <ul class="img_16">
     <li><a href="yearwise.php" class="with_img_16" title=""><img src="index/mbico_mbmcp_10.png" alt="" />Year Wise</a></li>
     <li><a href="reportprogramwise.php" class="with_img_16" title=""><img src="index/mbico_mbmcp_11.png" alt="" />Program Wise</a></li>
-    <li><a class="with_img_16" title=""><img src="index/mbico_mbmcp_12.png" alt="" />Trainee Wise</a></li>
+    <li><a href="reporttraineewise.php" class="with_img_16" title=""><img src="index/mbico_mbmcp_12.png" alt="" />Trainee Wise</a></li>
     <li><a class="with_img_16" title=""><img src="index/mbico_mbmcp_13.png" alt="" />State Wise</a></li>
     <li class="last_item"><a class="with_img_16 with_arrow" title=""><img src="index/mbico_mbmcp_14.png" alt="" />View Uploaded</a>
       <ul class="img_16">

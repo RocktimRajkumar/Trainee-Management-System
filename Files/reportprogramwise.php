@@ -80,12 +80,13 @@ session_start();
 <script> 
 
 	 function myProgramName(str){
+          document.getElementById("print").style.display="none";
     if (str == "0") {
         document.getElementById("programName").innerHTML = "";
         document.getElementById("programtype").innerHTML = "";
 		var trainee=document.getElementById('programtype');
 		trainee.style.display="none";
-        document.getElementById("print").display="none";
+       
         return;
     } else { 
 	var trainee=document.getElementById('programtype');
@@ -112,11 +113,13 @@ session_start();
     function myProgramType(str,type){
 		var trainee=document.getElementById('programtype');
 		trainee.style.display="table";
-        document.getElementById('print').style.display="block";
+        
     if (str == "0") {
         document.getElementById("programtype").innerHTML = "";
+        document.getElementById('print').style.display="none";
         return;
     } else { 
+        document.getElementById('print').style.display="block";
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
