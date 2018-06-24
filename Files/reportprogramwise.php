@@ -25,7 +25,7 @@ session_start();
 #boxxe{
 	width:180px;
 }
-#programtype,#print{
+#programtype,#print,#proPGDAEM{
 	display:none;
 }
 </style>
@@ -53,6 +53,7 @@ session_start();
 												
 											}
 											?>
+                echo '<option value="PGDAEM">PGDAEM</option>';
                 </select></td>
              </tr>
 			 
@@ -61,6 +62,36 @@ session_start();
              
 </table>
 
+<table id="proPGDAEM">
+    <tr>
+        <td><label for="batch">BATCH:</label></td>
+        <td><select name="batch" id="batch">
+            <option value="2014-15">2014-15</option>
+                <option value="2015-16">2015-16</option>
+                <option value="2016-17">2016-17</option>
+                <option value="2017-18">2017-18</option>
+                <option value="2018-19" selected>2018-19</option>
+        </select></td>
+    </tr>
+    <tr>
+               <td height="35">STATE:</td>
+               <td height="35"><select id="state" name="state" id="state">
+                <option value="assam">Assam</option>
+                <option value="nagaland">Nagaland</option>
+            </select></td>
+             </tr>
+             
+             <tr>
+               <td height="35">SEMESTER:</td>
+               <td height="35"><select name="semester" id="sem">
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+            </select></td>
+             </tr>
+    <tr>
+        <td colspan="2"><input type="button" value="Search" onclick="searchpgdaem();"></td>
+    </tr>
+</table>
 
 <table id="programName" align=center>
 </table>
@@ -79,6 +110,38 @@ session_start();
 </html>
 <script> 
 
+    function searchpgdaem(){
+        
+        var batch=document.getElementById("batch");
+        var batchi=batch.selectedIndex;
+        var batval=batch.options[batchi].value;
+        
+        var state=document.getElementById("state");
+        var statei=state.selectedIndex;
+        var stateval=state.options[statei].value;
+        
+        var sem=document.getElementById("sem");
+        var semi=sem.selectedIndex;
+        var semval=sem.options[semi].value;
+        
+        var trainee=document.getElementById('programtype');
+		trainee.style.display="table";
+        
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("programtype").innerHTML=this.responseText;
+                
+            }
+        };
+        xmlhttp.open("GET","pgdaemtraineedetail.php?batch="+batval+"&state="+stateval+"&sem="+semval,true);
+        xmlhttp.send();
+        
+    }
+    
 	 function myProgramName(str){
           document.getElementById("print").style.display="none";
     if (str == "0") {
@@ -86,9 +149,18 @@ session_start();
         document.getElementById("programtype").innerHTML = "";
 		var trainee=document.getElementById('programtype');
 		trainee.style.display="none";
-       
+        document.getElementById("proPGDAEM").style.display="none";      
         return;
-    } else { 
+    }else if(str=="PGDAEM"){
+        document.getElementById("programName").innerHTML = "";
+        document.getElementById("programtype").innerHTML = "";
+		var trainee=document.getElementById('programtype');
+		trainee.style.display="none";
+      document.getElementById("proPGDAEM").style.display="table";  
+    } 
+         
+        else { 
+            document.getElementById("proPGDAEM").style.display="none";
 	var trainee=document.getElementById('programtype');
 		trainee.style.display="none";
         document.getElementById("programtype").innerHTML = "";
