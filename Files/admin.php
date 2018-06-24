@@ -25,5 +25,6 @@ if(!isset($_SESSION["adminlogin"]))
 	
      <p>The EEI Management Committee is the apex body of the institute. The Vice  Chancellor,  Assam Agricultural  University  is  the  Chairperson  of  the  committee,  and  the  Director,  EEI  is  the  Member Secretary. The Management Committee meeting is generally held once or twice in a year to review the performance of the institute, and to make policy decisions for its effective functioning. The Director of the Institute is responsible for managing its programmes and day-to-day management and administration. The Director works under the administrative control of the Vice Chancellor, AAU.</p>
 </div>
+<a href="Annual Report FF2017-18 xxx.docx"><input align="center" style="margin-left:47%; margin-right:auto" type="button" class="a1-btn a1-blue" value="VIEW MORE" id="" /></a>
 </body>
 </html>

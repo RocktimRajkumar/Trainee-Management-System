@@ -61,7 +61,7 @@ echo '<tr>
                                 $tablename="regional";
                             
                             
-                            echo '<td><a href=traineeviewall.php?tid="'.$tid.'"&sn="'.$sn.'"&tname='.$tablename.'><input type="submit" value="View All"></a></td>';
+                            echo '<td><a href=traineeviewall.php?tid="'.$tid.'"&sn="'.$sn.'"&tname='.$tablename.'><input class="a1-btn a1-blue" type="submit" value="View All"></a></td>';
 					        $sno++;
                             
 					        

@@ -35,10 +35,10 @@ session_start();
  <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 
-<input type="text" placeholder="Search by Trainee Name" onkeyup="searchtrainee(this.value);"/>
+<input type="text" style="margin-left:45%; margin-right:auto" placeholder="Search by Trainee Name" onkeyup="searchtrainee(this.value);"/>
 
-<br>
-<input align="center" style="margin-left:auto; margin-right:auto" type="button" class="a1-btn a1-blue" value="PRINT" id="print" onclick="myFunction()"/>
+<br><br>
+<input align="center" style="margin-left:49%; margin-right:auto" type="button" class="a1-btn a1-blue" value="PRINT" id="print" onclick="myFunction()"/>
 <div id=printreport>
 
 <table id="traineeName" border=1 class=""  align="center" style="margin-top:10px; width:1000px">

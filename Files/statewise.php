@@ -13,7 +13,7 @@ session_start();
 <html>
 <head>
 <meta charset="utf-8">
-<title>TMS | Add Program</title>
+<title>TMS | Statewise report</title>
 <link href="a1style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="./script/script.js"></script>
@@ -35,15 +35,15 @@ session_start();
  <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 
-<label for="select">State :</label>
+<label style="margin-left:620px" for="select">State :</label>
 <select id="select" onchange="loadtrainee(this.value)">
     <option value="assam" selected>Assam</option>
     <option value="nagaland">Nagaland</option>
     
 </select>
 
-<br>
-<input align="center" style="margin-left:auto; margin-right:auto" type="button" class="a1-btn a1-blue" value="PRINT" id="print" onclick="myFunction()"/>
+<br><br>
+<input align="center" style="margin-left:650px; margin-right:auto" type="button" class="a1-btn a1-blue" value="PRINT" id="print" onclick="myFunction()"/>
 <div id=printreport>
 
 <table id="traineeName" border=1 class=""  align="center" style="margin-top:10px; width:1000px">
