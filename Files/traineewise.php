@@ -52,8 +52,16 @@ echo '<tr>
                             $tid=$row['tid'];
                             $sn=$row['sn'];
                             $tablename=$row['type'];
+                        
+                            if($tablename=="OnCampus")
+                                $tablename="oncampus";
+                            else if($tablename=="OffCampus")
+                                $tablename="offcampus";
+                            else if($tablename=="Regional Workshop")
+                                $tablename="regional";
                             
-                            echo '<td><a href=traineeviewall.php?tid="'.$tid.'"&sn="'.$sn.'"&tname="'.$tablename.'"><input type="submit" value="View All"></a></td>';
+                            
+                            echo '<td><a href=traineeviewall.php?tid="'.$tid.'"&sn="'.$sn.'"&tname='.$tablename.'><input type="submit" value="View All"></a></td>';
 					        $sno++;
                             
 					        
