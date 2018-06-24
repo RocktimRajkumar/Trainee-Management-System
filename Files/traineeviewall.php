@@ -13,7 +13,7 @@ session_start();
 <html>
 <head>
 <meta charset="utf-8">
-<title>TMS | View Trainee</title>
+<title>TMS | View All Trainee</title>
 <link href="a1style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="./script/script.js"></script>
@@ -122,7 +122,7 @@ session_start();
 				<tr><td colspan=2><h5 align="center" >Program enrolled in:</h5></td></tr>
 			   <tr id="protype">
                <td height="35">PROGRAM TYPE:</td>
-               <td height="35"><input name="ptype" readonly value="<?php echo "oncampus" ?>" type="text" size="45"></td>
+               <td height="35"><input name="ptype" readonly value="<?php echo $tname; ?>" type="text" size="45"></td>
              </tr>
 			 
 			 <tr id="ptype">
@@ -159,26 +159,6 @@ session_start();
 </html>
 <script> 
     
-    function searchtrainee(str){
-        var print=document.getElementById("print");
-        var trainee=document.getElementById("traineeName");
-        
-    
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("traineeName").innerHTML=this.responseText;
-                
-            }
-        };
-        xmlhttp.open("GET","traineewise.php?q="+str,true);
-        xmlhttp.send();
-    }
-
-       
     
 	
 	function myFunction()

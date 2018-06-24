@@ -1,16 +1,10 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Untitled</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="index_files/mbcsmbmcp.css" type="text/css" />
-</head>
-<body>
+
 
 
 <div id="mbmcpebul_wrapper" style="max-width: 100%;">
   <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu" style="display:table;margin-left:auto;margin-right:auto;">
   <li><div class="icon_1 buttonbg" style="width: 93px;"><a href="admin.php" class="button_1">Home</a></div></li>
+
   <li><div class="arrow buttonbg" style="width: 129px;"><div class="icon_2"><a>Program</a></div></div>
     <ul class="img_16">
     <li><a href="addprogram.php" class="with_img_16" title=""><img src="index/mbico_mbmcp_1.png" alt="" />Add Program</a></li>
@@ -49,9 +43,9 @@
   <li><div class="icon_8 buttonbg" style="width: 103px;"><a href="logout.php" class="button_8">Logout</a></div></li>
   </ul>
 </div>
+
 <!-- Menus will work without this javascript file. It is used only for extra
      effects, improved usability, compatibility with very old web browsers
      and support for touch screen devices. -->
-<script type="text/javascript" src="index/mbjsmbmcp.js"></script>
-</body>
-</html>
+<script type="text/javascript" src="index_files/mbjsmbmcp.js"></script>
+
