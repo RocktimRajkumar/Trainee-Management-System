@@ -62,7 +62,7 @@ session_start();
              
 </table>
 
-<table id="proPGDAEM">
+<table align=center id="proPGDAEM">
     <tr>
         <td><label for="batch">BATCH:</label></td>
         <td><select name="batch" id="batch">
@@ -89,7 +89,7 @@ session_start();
             </select></td>
              </tr>
     <tr>
-        <td colspan="2"><input type="button" value="Search" onclick="searchpgdaem();"></td>
+        <td colspan="2"><input type="button"  value="Search" class="a1-btn a1-blue" onclick="searchpgdaem();"></td>
     </tr>
 </table>
 
