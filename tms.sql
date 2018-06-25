@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 24/06/2018 02:46:10
+ Date: 25/06/2018 09:11:35
 */
 
 SET NAMES utf8mb4;
@@ -37,6 +37,7 @@ CREATE TABLE `address`  (
 INSERT INTO `address` VALUES ('1528051374', 'Jorhat', 'Assam', 'JPR', '785001');
 INSERT INTO `address` VALUES ('1529429536', 'Mumbai', 'Maharastra', 'Andhari', '785002');
 INSERT INTO `address` VALUES ('1529661540', 'Saginaw', 'MI', '3527  Hart Ridge Road', '785006');
+INSERT INTO `address` VALUES ('1529851406', 'Greensboro', 'NC', 'Greensboro', '27409');
 
 -- ----------------------------
 -- Table structure for admin
@@ -50,7 +51,12 @@ CREATE TABLE `admin`  (
   `usecurekey` varchar(25) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`userid`) USING BTREE,
   UNIQUE INDEX `uemail`(`uemail`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of admin
+-- ----------------------------
+INSERT INTO `admin` VALUES (1, 'admin', 'myadmin', 'admin@gmail.com', 'admin');
 
 -- ----------------------------
 -- Table structure for offcampus
@@ -126,8 +132,6 @@ CREATE TABLE `pgdaem`  (
 -- ----------------------------
 -- Records of pgdaem
 -- ----------------------------
-INSERT INTO `pgdaem` VALUES (2, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', '1234', 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
-INSERT INTO `pgdaem` VALUES (3, '2014-15', 'assam', '1st', 'abc', 0x646566, 'ghi', 'jkl', '1234', 'abc@gmail.com', 'mno', 'pqrst', 'uvwx');
 INSERT INTO `pgdaem` VALUES (4, '2014-15', 'assam', '1st', 'Biraj', 0x31353239343137323330, 'stuent', 'titabor', '8976332', 'biraj@gmail.com', '12th', 'pgd', '2');
 INSERT INTO `pgdaem` VALUES (5, '2018-19', 'nagaland', '2nd', 'Dean K Cutler', 0x31353239373837393334, 'Professor', '4318  Harley Brook Lane', '81453517', 'dean@gmail.com', 'HS Passed', 'Soft Skills', '4');
 INSERT INTO `pgdaem` VALUES (6, '2018-19', 'assam', '1st', 'Timothy A Green', 0x31353239373837393732, 'Student', '827  Lost Creek Road', '8011864512', 'timonthy@gmail.com', 'Under graduate', 'Management Skills', '2');
@@ -196,7 +200,7 @@ CREATE TABLE `programme`  (
   `type_id` int(4) NOT NULL AUTO_INCREMENT,
   `type` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`type_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of programme
@@ -241,6 +245,8 @@ INSERT INTO `pschedule` VALUES ('180604000648', 2, ' 09.30-10.15', 'Management G
 INSERT INTO `pschedule` VALUES ('180604000648', 2, ' 10.30-01.00', 'Visit Cinnamara Tea Estate to interact with staff and factory visit', 'Field Visit', 'Ms.P.Sharma,EEi,Jorhat', 1);
 INSERT INTO `pschedule` VALUES ('180604000648', 2, ' 01.00-02.00', 'Lunch Break', 'Lunch Break', 'Lunch Break', 2);
 INSERT INTO `pschedule` VALUES ('180604000648', 2, ' 02.00-04.00', 'Management Game -VII', 'Group work Presentation input', 'Mr.H.Das,EEI,Jorhat', 3);
+INSERT INTO `pschedule` VALUES ('180604000648', 1, ' 2.00-4.00', 'Management Game -IV', 'Group work presentation input', 'Dr.B.L.khuhly, SAMETI, Mizoram', 0);
+INSERT INTO `pschedule` VALUES ('180604000648', 1, ' 2.00-4.00', 'Management Game -IV', 'Group work presentation input', 'Dr.B.L.khuhly, SAMETI, Mizoram', 0);
 
 -- ----------------------------
 -- Table structure for regional
@@ -307,5 +313,6 @@ CREATE TABLE `trainee`  (
 INSERT INTO `trainee` VALUES ('1528051374', 'Govinda Poddar', 'Student', '8795462120', '2018-06-06', 1, 8, NULL, NULL, NULL);
 INSERT INTO `trainee` VALUES ('1529429536', 'Telusko', 'Teacher', '7896543210', '2018-06-19', 3, 9, 'Graduate', 'telusko@gmail.com', 'Regional');
 INSERT INTO `trainee` VALUES ('1529661540', 'Lori J Donoho', 'Student', '9293238998', '2018-06-23', 1, 9, 'H.S', 'lori@gmail.com', 'abc');
+INSERT INTO `trainee` VALUES ('1529851406', 'Eric J Yang', 'Professor', '3362013747', '2018-06-25', 2, 7, 'HS', 'eric@gmail.com', 'Skill Development');
 
 SET FOREIGN_KEY_CHECKS = 1;
