@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <?php
  include "connect.php";
  $sql = ("select * from programme");
@@ -21,7 +21,7 @@ $result = mysqli_query($link,$sql);
 <link rel="stylesheet" href="index_files/mbcsmbmcp.css" type="text/css" />
 </head>
 
-<body>
+<body bgcolor="#B8FDB5">
 
 <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>

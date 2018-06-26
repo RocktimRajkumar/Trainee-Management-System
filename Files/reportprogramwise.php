@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 
 <?php
  include "connect.php";
@@ -36,7 +36,7 @@ session_start();
 							  
 ?>
 
-<body>
+<body bgcolor="#B8FDB5">
  <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 

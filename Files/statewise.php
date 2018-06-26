@@ -31,7 +31,7 @@ session_start();
 							  
 ?>
 
-<body onload="loadtrainee('assam');">
+<body bgcolor="#B8FDB5" onload="loadtrainee('assam');">
  <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 

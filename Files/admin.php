@@ -16,7 +16,7 @@ if(!isset($_SESSION["adminlogin"]))
 <link rel="stylesheet" href="index_files/mbcsmbmcp.css" type="text/css" />
 </head>
 
-<body>
+<body bgcolor="#B8FDB5">
 <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 <img src="images/lock.png" width="60" height="60" class="center">

@@ -1,4 +1,4 @@
-<?php
+ <?php
 session_start();
 if(!isset($_SESSION["adminlogin"]))
 {
@@ -17,7 +17,7 @@ if(!isset($_SESSION["adminlogin"]))
 <link rel="stylesheet" href="index_files/mbcsmbmcp.css" type="text/css" />
 <style> #boxxe{ width:230px; }</style>
 </head>
-<body>
+<body bgcolor="#B8FDB5">
   <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
    

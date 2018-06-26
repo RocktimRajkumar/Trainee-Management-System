@@ -17,7 +17,7 @@ session_start();
 <link rel="stylesheet" href="index_files/mbcsmbmcp.css" type="text/css" />
 <style> #boxxe{ width:200px; }</style>
 </head>
-<body>
+<body bgcolor="#B8FDB5">
   <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 
