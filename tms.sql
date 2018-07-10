@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 25/06/2018 09:11:35
+ Date: 26/06/2018 12:21:56
 */
 
 SET NAMES utf8mb4;
@@ -314,5 +314,56 @@ INSERT INTO `trainee` VALUES ('1528051374', 'Govinda Poddar', 'Student', '879546
 INSERT INTO `trainee` VALUES ('1529429536', 'Telusko', 'Teacher', '7896543210', '2018-06-19', 3, 9, 'Graduate', 'telusko@gmail.com', 'Regional');
 INSERT INTO `trainee` VALUES ('1529661540', 'Lori J Donoho', 'Student', '9293238998', '2018-06-23', 1, 9, 'H.S', 'lori@gmail.com', 'abc');
 INSERT INTO `trainee` VALUES ('1529851406', 'Eric J Yang', 'Professor', '3362013747', '2018-06-25', 2, 7, 'HS', 'eric@gmail.com', 'Skill Development');
+
+-- ----------------------------
+-- Table structure for uploadprogram
+-- ----------------------------
+DROP TABLE IF EXISTS `uploadprogram`;
+CREATE TABLE `uploadprogram`  (
+  `sn` int(5) NOT NULL AUTO_INCREMENT,
+  `program` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `file` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`sn`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of uploadprogram
+-- ----------------------------
+INSERT INTO `uploadprogram` VALUES (1, 'oncampus', './uploadprogram/slideshow_html_css.txt');
+INSERT INTO `uploadprogram` VALUES (2, 'oncampus', './uploadprogram/PhotoshopPrefsManager-20180116-225719.log');
+INSERT INTO `uploadprogram` VALUES (3, 'offcampus', './uploadprogram/slideshow_html_css.txt');
+INSERT INTO `uploadprogram` VALUES (4, 'regional', './uploadprogram/Welcome Scan.jpg');
+
+-- ----------------------------
+-- Table structure for uploadschedule
+-- ----------------------------
+DROP TABLE IF EXISTS `uploadschedule`;
+CREATE TABLE `uploadschedule`  (
+  `sn` int(5) NOT NULL AUTO_INCREMENT,
+  `program` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `file` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`sn`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of uploadschedule
+-- ----------------------------
+INSERT INTO `uploadschedule` VALUES (1, 'regional', './uploadschedule/apps icon invert.png');
+
+-- ----------------------------
+-- Table structure for uploadtrainee
+-- ----------------------------
+DROP TABLE IF EXISTS `uploadtrainee`;
+CREATE TABLE `uploadtrainee`  (
+  `sn` int(5) NOT NULL AUTO_INCREMENT,
+  `program` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `file` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`sn`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of uploadtrainee
+-- ----------------------------
+INSERT INTO `uploadtrainee` VALUES (5, 'offcampus', './uploadtrainee/064-256.png');
 
 SET FOREIGN_KEY_CHECKS = 1;
