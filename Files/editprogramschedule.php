@@ -77,7 +77,7 @@ function myProgram1(){
 <div id="status">
     
 </div>
-<table align="center">
+<table align="center" style="margin-top:4%;">
  <tr>
            	   <td height="35">SCHEDULE DAY:</td>
            	   <td height="35"><select  name="select" id="select">

@@ -39,7 +39,7 @@ session_start();
  <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 
-<table align=center>
+<table align=center style="margin-top:4%;">
 
 <tr id="protype">
                <td height="35">PROGRAM TYPE:</td>

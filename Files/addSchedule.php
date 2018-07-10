@@ -37,7 +37,7 @@ $result = mysqli_query($link,$sql);
     
 </div>
 
-<div class="a1-container a1-small a1-padding-32" style="margin-top:2px; margin-bottom:2px;">
+<div class="a1-container a1-small a1-padding-32" style="margin-top:4%; margin-bottom:2px;">
         <div class="a1-card-8 a1-light-gray" style="width:800px; margin:0 auto;">
 		<div class="a1-container a1-dark-gray a1-center">
         	<h6>ADD SCHEDULE</h6>

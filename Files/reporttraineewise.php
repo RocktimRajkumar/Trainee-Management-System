@@ -35,7 +35,7 @@ session_start();
  <?php include('menu.php'); ?>
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 
-<input type="text" style="margin-left:45%; margin-right:auto" placeholder="Search by Trainee Name" onkeyup="searchtrainee(this.value);"/>
+<input type="text" style="margin-left:45%; margin-right:auto;margin-top:4%;" placeholder="Search by Trainee Name" onkeyup="searchtrainee(this.value);"/>
 
 <br><br>
 <input align="center" style="margin-left:49%; margin-right:auto" type="button" class="a1-btn a1-blue" value="PRINT" id="print" onclick="myFunction()"/>

@@ -36,7 +36,7 @@ session_start();
 <div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
 
 
-<h3 align=center>VIEW UPLOADED SCHEDULE REPORT</h3>
+<h3 align=center style="margin-top:4%;">VIEW UPLOADED SCHEDULE REPORT</h3>
 
 		<hr />
 
