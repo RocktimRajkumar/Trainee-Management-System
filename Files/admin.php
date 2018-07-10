@@ -18,7 +18,7 @@ if(!isset($_SESSION["adminlogin"]))
 
 <body bgcolor="#B8FDB5">
 <?php include('menu.php'); ?>
-<div class="banner"><img src="images/banner.jpg" style="width:100%" ></div>
+<div class="banner" style="margin-bottom:6%;"><img src="images/banner.jpg" style="width:100%" ></div>
 <img src="images/lock.png" width="60" height="60" class="center">
 <div class="welcome" style="margin-top:15px" align="center"><h3>WELCOME ADMIN</h3></div>
 

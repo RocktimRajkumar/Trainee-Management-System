@@ -33,7 +33,7 @@ session_start();
 
 <body bgcolor="#B8FDB5" onload="loadtrainee('2018-2019');">
  <?php include('menu.php'); ?>
-<div class="banner" style="margin-bottom:4%;"><img src="images/banner.jpg" style="width:100%" ></div>
+<div class="banner" style="margin-bottom:6%;"><img src="images/banner.jpg" style="width:100%" ></div>
 
 <label style="margin-left:620px" for="select">Year :</label>
 <select id="select" onchange="loadtrainee(this.value)">

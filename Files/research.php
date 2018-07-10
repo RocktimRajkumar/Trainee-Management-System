@@ -26,7 +26,7 @@ session_start();
 		<div class="a1-container a1-dark-gray a1-center">
         	<h6>UPLOAD RESEARCH REPORT</h6>
         </div>
-       <form id="form1" name="form1" method="post" class="a1-container" action="saveresearchreport.php">
+       <form id="form1" name="form1" method="post" class="a1-container" action="saveresearchreport.php" enctype="multipart/form-data">
          <table width="100%" border="0" align="center">
          <tr>
             <td height="35"><label for="program">Program:</label></td>
